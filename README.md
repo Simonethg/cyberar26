@@ -38,8 +38,13 @@ Mapeo basado en el plan de trabajo recibido para el hackathon:
 | --- | --- |
 | Monitor de la red industrial de una base ficticia | Simulador, API, 12 dispositivos iniciales y catálogo geográfico; vista Mapa pendiente de integrar |
 | Asistente en español para resumir, clasificar y priorizar alertas | Reglas asignan severidad; Ollama explica alertas graves y resume el turno con fallback |
-| Correlación de eventos para reconstruir la secuencia de un ataque | Guion IoT y alerta crítica con tres señales relacionadas a los 65 s |
+| Correlación de eventos para reconstruir la secuencia de un ataque | Guion IoT y alerta crítica a los 65 s; correlación temporal sin vínculo causal verificado |
 | Infraestructura propia y control de los datos | Backend, SQLite y modelo local; instalar dependencias y descargar el modelo antes de desconectarse |
+
+La crítica del guion IoT combina señales de dos dispositivos: el contacto nuevo de
+`dev-13` con Telegram y el volumen de `dev-11`. La alerta del destino desconocido del
+sensor existe por separado, pero no está enlazada en la crítica. Es una limitación del
+correlador actual, detallada en el [pitch](docs/pitch.md), y no prueba una exfiltración.
 
 | Condición común del plan | Cobertura |
 | --- | --- |

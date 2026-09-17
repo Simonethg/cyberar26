@@ -155,6 +155,13 @@ y `secuencia_exfiltracion` **crítica** a 65 s. El plan proponía volumen críti
 60 s; la severidad actual pertenece a las reglas del backend y no se cambia desde el JSON.
 `asn_desconocido` es media. La correlación conserva las tres señales relacionadas.
 
+Con semilla 42, esas señales son `dispositivo_nuevo` de `dev-13` a 20 s,
+`destino_nuevo` de `dev-13` hacia Telegram (AS62041) a 22 s y `volumen_inusual`
+de `dev-11` a 58 s. El destino desconocido de `dev-11` a 45 s genera su propia
+alerta, pero no forma parte de las relacionadas de la crítica. El correlador selecciona
+la primera señal de cada regla dentro de la ventana temporal, sin comprobar que
+compartan dispositivo, destino o flujo. La coincidencia temporal no demuestra causalidad.
+
 ### Agregar un guion
 
 Desde la raíz del repo:

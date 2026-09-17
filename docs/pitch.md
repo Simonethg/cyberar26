@@ -47,18 +47,23 @@ Seleccionar un flujo habitual y recorrer router, ISP, IXP, cable y destino.
 | Reloj del pitch | Reloj del guion | Señal |
 | --- | --- | --- |
 | 0:45 | 20 s | `dev-13`: dispositivo nuevo, informativa |
+| 0:47 | 22 s | `dev-13`: destino nuevo, Telegram, media |
 | 1:10 | 45 s | `dev-11`: destino nuevo, ASN ficticio desconocido y tráfico sin cifrar |
 | 1:23 | 58 s | Volumen inusual, alta |
 | 1:30 | 65 s | Secuencia de exfiltración, crítica |
 
-> «Primero aparece un equipo no declarado. Después, el sensor de acceso empieza a
-> mandar datos a un destino que nunca usaba. Su volumen también cambia.
-> Una alerta aislada exige contexto. TRACE relaciona las señales y muestra una
-> secuencia para investigar. El país por sí solo no dispara la conclusión.»
+> «Aparece un equipo no declarado y contacta un destino fuera de su línea base.
+> Después, el sensor de acceso envía datos a un destino desconocido y aumenta su volumen.
+> TRACE junta eventos de distintos equipos por cercanía temporal:
+> es una hipótesis para revisar, no una prueba de exfiltración.»
 
 **Acción:** abrir la crítica de `dev-11` y mostrar sus tres alertas relacionadas.
-No contar `dev-13` como si fuera el sensor: son equipos distintos. La correlación
-es una hipótesis del ejercicio basada en señales, no una prueba de causalidad.
+Con semilla 42, enlaza el dispositivo nuevo `dev-13` a 20 s, su contacto con
+Telegram (AS62041) a 22 s y el volumen de `dev-11` a 58 s. La alerta del destino
+desconocido del sensor a 45 s existe por separado: **no está enlazada en la crítica**.
+El correlador toma la primera señal disponible de cada regla dentro de la ventana;
+no exige un mismo dispositivo, destino ni flujo. No presentar a Telegram como malicioso
+ni contar `dev-13` como si fuera el sensor.
 
 ### 1:30–1:55 · De la alerta a la decisión
 
@@ -138,6 +143,12 @@ inferidos. No representa una certeza medida ni verifica la ruta física de un pa
 **¿Una ruta fuera de Argentina significa un ataque?** No. El destino, el cambio de volumen
 y la actividad habitual aportan contexto. La jurisdicción de una ficha tampoco resuelve
 por sí sola el régimen legal de cada dato.
+
+**¿La crítica demuestra que los eventos están conectados?** No. La regla actual combina
+señales dentro de una ventana temporal sin comprobar que compartan dispositivo o destino.
+En el guion IoT, el destino nuevo enlazado pertenece a `dev-13`, mientras que el volumen
+pertenece al sensor `dev-11`. Esa limitación debe resolverse en el backend para atribuir
+una secuencia concreta; la plantilla de explicación no aporta evidencia adicional.
 
 **¿Por qué el ASN desconocido está en la tabla?** Es una ficha pedagógica que el backend
 reconoce por su nombre. Usa un ASN reservado para documentación, sin atribuir el ejercicio
