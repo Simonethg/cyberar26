@@ -1,5 +1,5 @@
 {
-  "generada_con": "guion normal, semilla 42",
+  "generada_con": "Calibración fija del backend para el guion normal con semilla 42; no proviene de una captura real.",
   "dispositivos": {
     "dev-01": {
       "bytes_salida_por_hora": 4500000,
