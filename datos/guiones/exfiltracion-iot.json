@@ -1,0 +1,41 @@
+{
+  "id": "exfiltracion-iot",
+  "nombre": "Exfiltración desde un sensor IoT",
+  "descripcion": "Un dispositivo no declarado se conecta, el sensor de acceso 3 empieza a mandar datos a un AS desconocido en Países Bajos y el volumen se dispara. A los 65 s el sistema correlaciona los tres eventos.",
+  "duracion_s": 180,
+  "semilla": 42,
+  "fondo": {
+    "flujos_por_segundo": 6,
+    "mezcla": {
+      "cdn": 0.4,
+      "mensajeria": 0.2,
+      "nube": 0.25,
+      "otros": 0.15
+    }
+  },
+  "eventos": [
+    {
+      "t": 20,
+      "tipo": "dispositivo_nuevo",
+      "dispositivo_id": "dev-13",
+      "nombre": "Equipo no declarado",
+      "mac": "AA:BB:CC:FF:EE:13",
+      "ip": "192.168.0.99"
+    },
+    {
+      "t": 45,
+      "tipo": "flujo_forzado",
+      "dispositivo_id": "dev-11",
+      "destino_id": "dc-desconocido-nl",
+      "bytes_por_s": 150000,
+      "duracion_s": 120,
+      "cifrado": null
+    },
+    {
+      "t": 90,
+      "tipo": "cambio_ruta",
+      "dispositivo_id": "dev-03",
+      "via": "ixp-mad"
+    }
+  ]
+}

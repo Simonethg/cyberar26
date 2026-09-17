@@ -1,0 +1,28 @@
+{
+  "cdn": [
+    "nube-cloudflare-mia",
+    "nube-cloudflare-gru",
+    "nube-akamai-mad",
+    "nube-netflix-mia"
+  ],
+  "mensajeria": [
+    "nube-telegram-ams",
+    "nube-whatsapp-gru",
+    "nube-meta-iad"
+  ],
+  "nube": [
+    "nube-google-iad",
+    "nube-amazon-iad",
+    "nube-microsoft-dub",
+    "nube-apple-lax"
+  ],
+  "otros": [
+    "dc-bue",
+    "dc-gru",
+    "dc-mad",
+    "dc-scl",
+    "dc-nrt",
+    "dc-sin",
+    "dc-lon"
+  ]
+}

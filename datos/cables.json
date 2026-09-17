@@ -1,0 +1,90 @@
+[
+  {
+    "id": "cable-sam1",
+    "nombre": "Cable SAM-1 (Las Toninas ↔ Miami)",
+    "organizacion": "Telxius",
+    "amarre": {
+      "ciudad": "Las Toninas",
+      "pais": "AR",
+      "lat": -36.32,
+      "lon": -56.7
+    }
+  },
+  {
+    "id": "cable-atlantis2",
+    "nombre": "Cable Atlantis-2 (Las Toninas ↔ Lisboa)",
+    "organizacion": "Consorcio Atlantis-2",
+    "amarre": {
+      "ciudad": "Las Toninas",
+      "pais": "AR",
+      "lat": -36.33,
+      "lon": -56.71
+    }
+  },
+  {
+    "id": "cable-unisur",
+    "nombre": "Cable Unisur (Las Toninas ↔ Valparaíso)",
+    "organizacion": "Telxius",
+    "amarre": {
+      "ciudad": "Las Toninas",
+      "pais": "AR",
+      "lat": -36.34,
+      "lon": -56.69
+    }
+  },
+  {
+    "id": "cable-bicentenario",
+    "nombre": "Cable Bicentenario (Las Toninas ↔ Río)",
+    "organizacion": "Telecom Argentina",
+    "amarre": {
+      "ciudad": "Las Toninas",
+      "pais": "AR",
+      "lat": -36.31,
+      "lon": -56.72
+    }
+  },
+  {
+    "id": "cable-tannat",
+    "nombre": "Cable Tannat (Maldonado ↔ Santos)",
+    "organizacion": "Google/Antel",
+    "amarre": {
+      "ciudad": "Maldonado",
+      "pais": "UY",
+      "lat": -34.9,
+      "lon": -54.95
+    }
+  },
+  {
+    "id": "cable-monet",
+    "nombre": "Cable Monet (Santos ↔ Boca Ratón)",
+    "organizacion": "Google",
+    "amarre": {
+      "ciudad": "Santos",
+      "pais": "BR",
+      "lat": -23.96,
+      "lon": -46.33
+    }
+  },
+  {
+    "id": "cable-marea",
+    "nombre": "Cable Marea (Virginia ↔ Bilbao)",
+    "organizacion": "Telxius",
+    "amarre": {
+      "ciudad": "Bilbao",
+      "pais": "ES",
+      "lat": 43.26,
+      "lon": -2.93
+    }
+  },
+  {
+    "id": "cable-curie",
+    "nombre": "Cable Curie (Valparaíso ↔ Los Ángeles)",
+    "organizacion": "Google",
+    "amarre": {
+      "ciudad": "Valparaíso",
+      "pais": "CL",
+      "lat": -33.05,
+      "lon": -71.62
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "id": "normal",
+  "nombre": "Operación normal",
+  "descripcion": "Tráfico de fondo de la base, sin incidentes. Es el guion de arranque de la demo.",
+  "duracion_s": 600,
+  "semilla": 42,
+  "fondo": {
+    "flujos_por_segundo": 6,
+    "mezcla": {
+      "cdn": 0.4,
+      "mensajeria": 0.2,
+      "nube": 0.25,
+      "otros": 0.15
+    }
+  },
+  "eventos": []
+}

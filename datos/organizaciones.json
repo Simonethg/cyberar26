@@ -1,0 +1,242 @@
+[
+  {
+    "asn": 13335,
+    "nombre": "Cloudflare",
+    "pais": "US",
+    "tipo_servicio": "CDN",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Cloudflare es un CDN: tu tráfico pasa por él aunque el sitio final esté en otro país."
+  },
+  {
+    "asn": 15169,
+    "nombre": "Google",
+    "pais": "US",
+    "tipo_servicio": "Nube y servicios",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Google mueve buscador, video y nube; casi siempre te atiende desde el borde más cercano."
+  },
+  {
+    "asn": 32934,
+    "nombre": "Meta",
+    "pais": "US",
+    "tipo_servicio": "Redes sociales",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Meta atiende Facebook, Instagram y WhatsApp desde su propia red global."
+  },
+  {
+    "asn": 16509,
+    "nombre": "Amazon Web Services",
+    "pais": "US",
+    "tipo_servicio": "Nube",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "AWS hospeda una parte enorme de los servicios que usás sin saberlo."
+  },
+  {
+    "asn": 8075,
+    "nombre": "Microsoft",
+    "pais": "US",
+    "tipo_servicio": "Nube y ofimática",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Microsoft concentra Office, Teams y Azure; Dublín es su nodo europeo típico."
+  },
+  {
+    "asn": 20940,
+    "nombre": "Akamai",
+    "pais": "US",
+    "tipo_servicio": "CDN",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Akamai es el CDN más viejo: entrega actualizaciones y video desde miles de puntos."
+  },
+  {
+    "asn": 714,
+    "nombre": "Apple",
+    "pais": "US",
+    "tipo_servicio": "Servicios y nube",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Apple maneja iCloud y actualizaciones desde su red propia."
+  },
+  {
+    "asn": 62041,
+    "nombre": "Telegram",
+    "pais": "GB",
+    "tipo_servicio": "Mensajería",
+    "jurisdiccion": "Emiratos Árabes Unidos",
+    "contexto": "Telegram tiene registro en Reino Unido y operación en Dubái: la jurisdicción no es obvia."
+  },
+  {
+    "asn": 2906,
+    "nombre": "Netflix",
+    "pais": "US",
+    "tipo_servicio": "Video",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Netflix pone cachés dentro de los ISP: el video suele venir del país, el control no."
+  },
+  {
+    "asn": 7303,
+    "nombre": "Telecom Argentina",
+    "pais": "AR",
+    "tipo_servicio": "ISP",
+    "jurisdiccion": "Argentina",
+    "contexto": "Telecom es uno de los tres accesos fijos grandes del país."
+  },
+  {
+    "asn": 22927,
+    "nombre": "Telefónica",
+    "pais": "AR",
+    "tipo_servicio": "ISP",
+    "jurisdiccion": "Argentina",
+    "contexto": "Telefónica de Argentina opera acceso fijo y móvil."
+  },
+  {
+    "asn": 11664,
+    "nombre": "AMX Argentina",
+    "pais": "AR",
+    "tipo_servicio": "ISP",
+    "jurisdiccion": "Argentina",
+    "contexto": "Claro Argentina, parte de América Móvil."
+  },
+  {
+    "asn": 52376,
+    "nombre": "CABASE",
+    "pais": "AR",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Argentina",
+    "contexto": "CABASE opera los puntos de intercambio locales: si el tráfico pasa por acá, no sale del país."
+  },
+  {
+    "asn": 26162,
+    "nombre": "NIC.br",
+    "pais": "BR",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Brasil",
+    "contexto": "IX.br de San Pablo es el punto de intercambio más grande de la región."
+  },
+  {
+    "asn": 24115,
+    "nombre": "Equinix",
+    "pais": "US",
+    "tipo_servicio": "Data center e IXP",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Equinix opera data centers neutrales y el NAP of the Americas en Miami."
+  },
+  {
+    "asn": 6695,
+    "nombre": "DE-CIX",
+    "pais": "DE",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Alemania",
+    "contexto": "DE-CIX Frankfurt es uno de los IXP con más tráfico del mundo."
+  },
+  {
+    "asn": 1200,
+    "nombre": "AMS-IX",
+    "pais": "NL",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Países Bajos",
+    "contexto": "AMS-IX concentra buena parte del intercambio europeo."
+  },
+  {
+    "asn": 5459,
+    "nombre": "LINX",
+    "pais": "GB",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Reino Unido",
+    "contexto": "LINX es el punto de intercambio de Londres."
+  },
+  {
+    "asn": 6895,
+    "nombre": "ESpanix",
+    "pais": "ES",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "España",
+    "contexto": "ESpanix es el intercambio de Madrid, puerta natural de Sudamérica a Europa."
+  },
+  {
+    "asn": 2128,
+    "nombre": "INEX",
+    "pais": "IE",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Irlanda",
+    "contexto": "INEX conecta a los operadores irlandeses, donde varias nubes tienen región."
+  },
+  {
+    "asn": 24482,
+    "nombre": "SGIX",
+    "pais": "SG",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Singapur",
+    "contexto": "SGIX es el intercambio de Singapur, nodo de todo el sudeste asiático."
+  },
+  {
+    "asn": 7527,
+    "nombre": "JPIX",
+    "pais": "JP",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Japón",
+    "contexto": "JPIX es uno de los intercambios de Tokio."
+  },
+  {
+    "asn": 19626,
+    "nombre": "CoreSite",
+    "pais": "US",
+    "tipo_servicio": "Data center",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "CoreSite opera data centers neutrales en Estados Unidos."
+  },
+  {
+    "asn": 27678,
+    "nombre": "NIC Chile",
+    "pais": "CL",
+    "tipo_servicio": "IXP",
+    "jurisdiccion": "Chile",
+    "contexto": "NIC Chile opera el PIT, el intercambio chileno."
+  },
+  {
+    "asn": 3356,
+    "nombre": "Lumen",
+    "pais": "US",
+    "tipo_servicio": "Backbone",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "Lumen (ex CenturyLink/Level3) es una de las troncales globales."
+  },
+  {
+    "asn": 12956,
+    "nombre": "Telxius",
+    "pais": "ES",
+    "tipo_servicio": "Backbone y cables",
+    "jurisdiccion": "España",
+    "contexto": "Telxius opera cables submarinos que amarran en Las Toninas."
+  },
+  {
+    "asn": 3257,
+    "nombre": "GTT",
+    "pais": "US",
+    "tipo_servicio": "Backbone",
+    "jurisdiccion": "Estados Unidos",
+    "contexto": "GTT transporta tráfico entre continentes."
+  },
+  {
+    "asn": 6453,
+    "nombre": "Tata Communications",
+    "pais": "IN",
+    "tipo_servicio": "Backbone",
+    "jurisdiccion": "India",
+    "contexto": "Tata es una de las troncales con más presencia global."
+  },
+  {
+    "asn": 2914,
+    "nombre": "NTT",
+    "pais": "JP",
+    "tipo_servicio": "Backbone",
+    "jurisdiccion": "Japón",
+    "contexto": "NTT opera una de las redes troncales más grandes de Asia."
+  },
+  {
+    "asn": 47583,
+    "nombre": "AS desconocido",
+    "pais": "NL",
+    "tipo_servicio": "Hosting",
+    "jurisdiccion": "Países Bajos",
+    "contexto": "Hosting sin identificar: no está en la lista de organizaciones conocidas."
+  }
+]

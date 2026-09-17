@@ -1,0 +1,135 @@
+{
+  "generada_con": "guion normal, semilla 42",
+  "dispositivos": {
+    "dev-01": {
+      "bytes_salida_por_hora": 4500000,
+      "asn_habituales": [
+        16509,
+        8075,
+        13335
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-02": {
+      "bytes_salida_por_hora": 2800000,
+      "asn_habituales": [
+        8075,
+        13335,
+        15169
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-03": {
+      "bytes_salida_por_hora": 3200000,
+      "asn_habituales": [
+        15169,
+        13335,
+        32934,
+        8075
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-04": {
+      "bytes_salida_por_hora": 1900000,
+      "asn_habituales": [
+        15169,
+        13335,
+        16509
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-05": {
+      "bytes_salida_por_hora": 2400000,
+      "asn_habituales": [
+        15169,
+        32934,
+        13335
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-06": {
+      "bytes_salida_por_hora": 900000,
+      "asn_habituales": [
+        32934,
+        62041,
+        13335
+      ],
+      "paises_habituales": [
+        "GB",
+        "US"
+      ]
+    },
+    "dev-07": {
+      "bytes_salida_por_hora": 3600000,
+      "asn_habituales": [
+        13335,
+        15169,
+        16509,
+        2906
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-08": {
+      "bytes_salida_por_hora": 1400000,
+      "asn_habituales": [
+        32934,
+        62041,
+        714
+      ],
+      "paises_habituales": [
+        "GB",
+        "US"
+      ]
+    },
+    "dev-09": {
+      "bytes_salida_por_hora": 1100000,
+      "asn_habituales": [
+        16509,
+        13335
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-10": {
+      "bytes_salida_por_hora": 1050000,
+      "asn_habituales": [
+        16509,
+        13335
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-11": {
+      "bytes_salida_por_hora": 240000,
+      "asn_habituales": [
+        16509
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    },
+    "dev-12": {
+      "bytes_salida_por_hora": 180000,
+      "asn_habituales": [
+        8075
+      ],
+      "paises_habituales": [
+        "US"
+      ]
+    }
+  }
+}

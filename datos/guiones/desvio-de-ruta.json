@@ -1,0 +1,39 @@
+{
+  "id": "desvio-de-ruta",
+  "nombre": "Desvío de ruta por un tercer país",
+  "descripcion": "El tráfico del servidor de correo deja de salir por Miami y empieza a pasar por Madrid y Ámsterdam. Sirve para entrenar la lectura del mapa.",
+  "duracion_s": 180,
+  "semilla": 7,
+  "fondo": {
+    "flujos_por_segundo": 5,
+    "mezcla": {
+      "cdn": 0.35,
+      "mensajeria": 0.2,
+      "nube": 0.3,
+      "otros": 0.15
+    }
+  },
+  "eventos": [
+    {
+      "t": 30,
+      "tipo": "cambio_ruta",
+      "dispositivo_id": "dev-02",
+      "via": "ixp-mad"
+    },
+    {
+      "t": 75,
+      "tipo": "cambio_ruta",
+      "dispositivo_id": "dev-01",
+      "via": "ixp-ams"
+    },
+    {
+      "t": 120,
+      "tipo": "flujo_forzado",
+      "dispositivo_id": "dev-09",
+      "destino_id": "dc-ams",
+      "bytes_por_s": 40000,
+      "duracion_s": 45,
+      "cifrado": null
+    }
+  ]
+}

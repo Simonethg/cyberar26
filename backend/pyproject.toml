@@ -1,0 +1,29 @@
+[project]
+name = "trace-backend"
+version = "1.0.0"
+description = "Backend de TRACE: simulador de tráfico, detección explicable y asistente local"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.34.0",
+    "pydantic==2.10.4",
+    "sqlmodel==0.0.22",
+    "httpx==0.28.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4", "ruff==0.8.4"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tablas de datos: se leen mejor en una línea por fila.
+"herramientas/generar_datos.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["pruebas"]

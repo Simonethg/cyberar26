@@ -1,0 +1,122 @@
+[
+  {
+    "id": "dev-01",
+    "nombre": "Servidor de archivos",
+    "tipo": "servidor",
+    "ip": "192.168.0.10",
+    "mac": "AA:BB:CC:00:00:01",
+    "sector": "Sistemas",
+    "critico": true,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-02",
+    "nombre": "Servidor de correo",
+    "tipo": "servidor",
+    "ip": "192.168.0.11",
+    "mac": "AA:BB:CC:00:00:02",
+    "sector": "Sistemas",
+    "critico": true,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-03",
+    "nombre": "Notebook Comando",
+    "tipo": "notebook",
+    "ip": "192.168.0.12",
+    "mac": "AA:BB:CC:00:00:03",
+    "sector": "Comando",
+    "critico": true,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-04",
+    "nombre": "Notebook Logística",
+    "tipo": "notebook",
+    "ip": "192.168.0.13",
+    "mac": "AA:BB:CC:00:00:04",
+    "sector": "Logística",
+    "critico": false,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-05",
+    "nombre": "Notebook Operaciones 1",
+    "tipo": "notebook",
+    "ip": "192.168.0.14",
+    "mac": "AA:BB:CC:00:00:05",
+    "sector": "Operaciones",
+    "critico": false,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-06",
+    "nombre": "Tablet Guardia",
+    "tipo": "tablet",
+    "ip": "192.168.0.15",
+    "mac": "AA:BB:CC:00:00:06",
+    "sector": "Guardia",
+    "critico": false,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-07",
+    "nombre": "Notebook Operaciones 2",
+    "tipo": "notebook",
+    "ip": "192.168.0.16",
+    "mac": "AA:BB:CC:00:00:07",
+    "sector": "Operaciones",
+    "critico": true,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-08",
+    "nombre": "Celular Jefe de turno",
+    "tipo": "celular",
+    "ip": "192.168.0.17",
+    "mac": "AA:BB:CC:00:00:08",
+    "sector": "Comando",
+    "critico": false,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-09",
+    "nombre": "Cámara perimetral norte",
+    "tipo": "camara",
+    "ip": "192.168.0.18",
+    "mac": "AA:BB:CC:00:00:09",
+    "sector": "Seguridad",
+    "critico": false,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-10",
+    "nombre": "Cámara perimetral sur",
+    "tipo": "camara",
+    "ip": "192.168.0.19",
+    "mac": "AA:BB:CC:00:00:0A",
+    "sector": "Seguridad",
+    "critico": false,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-11",
+    "nombre": "Sensor de acceso 3",
+    "tipo": "sensor",
+    "ip": "192.168.0.20",
+    "mac": "AA:BB:CC:00:00:0B",
+    "sector": "Seguridad",
+    "critico": true,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  },
+  {
+    "id": "dev-12",
+    "nombre": "Impresora Estado Mayor",
+    "tipo": "impresora",
+    "ip": "192.168.0.21",
+    "mac": "AA:BB:CC:00:00:0C",
+    "sector": "Comando",
+    "critico": false,
+    "primera_vez_visto": "2026-09-10T08:00:00Z"
+  }
+]
