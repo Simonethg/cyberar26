@@ -3,8 +3,10 @@
 **Pitch de tres minutos · Persona C · CYBER.AR 2026 · Eje 2**
 
 Este es el guion objetivo para ensayar con la interfaz de Persona A integrada.
-En esta rama están el backend y los datos; el globo, paneles y sus controles todavía
-no están disponibles. La alternativa por API aparece al final.
+La rama incluye un frontend mínimo con mapamundi, alertas, acciones y resumen de turno.
+El globo, la selección detallada de flujos y los controles de capas y velocidad todavía
+no están disponibles. Para ensayar ahora, usá el mapamundi y los controles existentes;
+la alternativa por API aparece al final.
 
 ## Preparación
 
@@ -17,6 +19,7 @@ no están disponibles. La alternativa por API aparece al final.
    si tarda o entra el fallback, mostrá la evidencia sin esperar una respuesta instantánea.
 4. Con la interfaz integrada, dejá TRACE en primer plano, mapa en Argentina,
    inventario inicial visible, todas las capas necesarias y velocidad 1×.
+   En el frontend mínimo, usá la vista mundial y la velocidad fija del simulador.
    Prepará una grabación sólo después de probar ese recorrido.
 5. Probá previamente desconectar internet con todo ya cargado. Si hay un recurso remoto
    faltante, corregilo antes de prometer modo avión en vivo.
@@ -35,6 +38,8 @@ no están disponibles. La alternativa por API aparece al final.
 
 **Acción:** lanzar `exfiltracion-iot` a velocidad 1× exactamente a 0:25.
 Seleccionar un flujo habitual y recorrer router, ISP, IXP, cable y destino.
+En el frontend mínimo, mostrar las rutas en vivo y pasar el cursor sobre los nodos:
+no hay selección de flujo ni inspector de saltos.
 
 > «Esta base y su tráfico son ficticios. Cada arco une un dispositivo con su destino.
 > Podemos recorrer los saltos y consultar la organización y el país de referencia.
@@ -161,5 +166,6 @@ atención. La línea base sigue siendo la calibración fija del ejercicio.
 alertas; el operador ejecutaría cualquier respuesta en sus herramientas autorizadas.
 
 **¿Qué está verificado y qué falta?** Contratos, referencias, reproducción de datos,
-pruebas del backend y cronometraje por consola. Faltan la integración visual, el ensayo
-de tres minutos, la latencia del modelo en el equipo final y el ensayo sin internet.
+pruebas del backend y cronometraje por consola. El frontend mínimo está integrado;
+faltan el globo y sus controles completos, el ensayo de tres minutos, la latencia del
+modelo en el equipo final y el ensayo sin internet.

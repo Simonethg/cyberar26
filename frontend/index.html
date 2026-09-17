@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<title>TRACE — Mirá adónde van tus datos</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+  <h1>TRACE <span class="sub">Base Aérea El Chañar · tráfico simulado</span></h1>
+  <div class="controles">
+    <select id="guion"></select>
+    <button id="lanzar">Lanzar guion</button>
+    <button id="detener" class="secundario">Detener</button>
+    <a id="pdf" href="/api/informes/turno.pdf" target="_blank">Informe PDF</a>
+    <a id="csv" href="/api/alertas/export.csv">CSV</a>
+    <span id="estado" class="chip">conectando…</span>
+  </div>
+</header>
+
+<main>
+  <section class="mapa">
+    <canvas id="lienzo"></canvas>
+    <div id="tooltip" class="tooltip oculto"></div>
+    <div class="metricas" id="metricas"></div>
+  </section>
+
+  <aside class="lateral">
+    <div class="bloque">
+      <h2>Alertas <span id="contador" class="chip">0</span></h2>
+      <div id="alertas" class="lista"></div>
+    </div>
+    <div class="bloque">
+      <h2>Resumen de turno</h2>
+      <button id="resumir" class="secundario">Generar</button>
+      <p id="resumen" class="resumen">—</p>
+    </div>
+    <div class="bloque">
+      <h2>Top destinos</h2>
+      <div id="destinos" class="lista chica"></div>
+    </div>
+  </aside>
+</main>
+
+<div id="detalle" class="modal oculto">
+  <div class="tarjeta">
+    <button class="cerrar" id="cerrar-detalle">×</button>
+    <div id="detalle-cuerpo"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+:root {
+  --fondo: #0a1020;
+  --panel: #111a2e;
+  --borde: #1e2c4a;
+  --texto: #dbe6ff;
+  --tenue: #8296bd;
+  --ok: #3ddc97;
+  --info: #58a6ff;
+  --media: #f2c94c;
+  --alta: #ff9f43;
+  --critica: #ff5a5f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 14px/1.45 system-ui, "Segoe UI", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--borde);
+  background: var(--panel);
+}
+
+h1 { font-size: 18px; margin: 0; letter-spacing: 2px; }
+h2 { font-size: 13px; margin: 0 0 8px; text-transform: uppercase; color: var(--tenue); letter-spacing: 1px; }
+.sub { font-size: 12px; color: var(--tenue); letter-spacing: 0; margin-left: 10px; }
+
+.controles { display: flex; align-items: center; gap: 8px; }
+
+button, select, .controles a {
+  background: #18243d;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+}
+button:hover, .controles a:hover { border-color: var(--info); }
+button.secundario { color: var(--tenue); }
+
+.chip {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #16223a;
+  border: 1px solid var(--borde);
+  color: var(--tenue);
+}
+
+main { display: grid; grid-template-columns: 1fr 360px; height: calc(100vh - 53px); }
+
+.mapa { position: relative; overflow: hidden; }
+canvas { width: 100%; height: 100%; display: block; }
+
+.metricas {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.metricas div {
+  background: rgba(17, 26, 46, .88);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+.metricas b { display: block; font-size: 16px; font-weight: 600; }
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(10, 16, 32, .95);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+  max-width: 240px;
+}
+
+.lateral { border-left: 1px solid var(--borde); background: var(--panel); overflow-y: auto; padding: 12px; }
+.bloque { margin-bottom: 18px; }
+.lista { display: flex; flex-direction: column; gap: 6px; }
+
+.alerta {
+  border: 1px solid var(--borde);
+  border-left-width: 4px;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #0f1830;
+  cursor: pointer;
+}
+.alerta:hover { border-color: var(--info); }
+.alerta .fila { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--tenue); }
+.alerta .titulo { font-weight: 600; margin: 2px 0; }
+.alerta .texto { font-size: 12px; color: var(--tenue); }
+.alerta.critica { border-left-color: var(--critica); }
+.alerta.alta { border-left-color: var(--alta); }
+.alerta.media { border-left-color: var(--media); }
+.alerta.info { border-left-color: var(--info); }
+.alerta.cerrada, .alerta.reconocida { opacity: .55; }
+
+.chica .item { display: flex; justify-content: space-between; font-size: 12px; color: var(--tenue); }
+.resumen { font-size: 13px; color: var(--texto); margin: 8px 0 0; }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 18, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tarjeta {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 18px 20px;
+  width: min(620px, 92vw);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.cerrar { position: absolute; top: 8px; right: 10px; border: none; background: none; font-size: 20px; }
+.oculto { display: none; }
+
+.tarjeta h3 { margin: 0 0 4px; }
+.tarjeta dl { display: grid; grid-template-columns: 150px 1fr; gap: 4px 12px; font-size: 13px; margin: 12px 0; }
+.tarjeta dt { color: var(--tenue); }
+.tarjeta .acciones { display: flex; gap: 8px; margin-top: 12px; }
+.ruta { font-size: 12px; color: var(--tenue); line-height: 1.7; }
+.ruta .inferido { opacity: .6; font-style: italic; }

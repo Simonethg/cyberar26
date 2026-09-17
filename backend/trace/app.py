@@ -5,9 +5,11 @@ from __future__ import annotations
 import asyncio
 import contextlib
 import os
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from .motor import Motor
 from .rutas.api import router as router_api
@@ -58,3 +60,8 @@ app.include_router(router_ws)
 @app.get("/salud")
 async def salud() -> dict:
     return {"ok": True}
+
+
+FRONTEND = Path(__file__).resolve().parents[2] / "frontend"
+if FRONTEND.is_dir():
+    app.mount("/", StaticFiles(directory=FRONTEND, html=True), name="frontend")

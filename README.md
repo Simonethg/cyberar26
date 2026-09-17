@@ -7,7 +7,9 @@ Visualizador y analizador de rutas de tráfico de red **simulado** de una base f
 
 El repositorio provisional se llama `cyberar26`; el producto se llama **TRACE**.
 Incluye el backend de Persona B y los datos, documentación y pitch de Persona C.
-La interfaz del globo y sus paneles corresponde a Persona A y todavía no está en esta rama.
+También incluye un frontend mínimo de HTML/JS servido por FastAPI: mapamundi en canvas
+con rutas en vivo, panel de alertas con detalle y acciones, métricas, top destinos
+y resumen de turno. El globo y los controles completos de Persona A siguen pendientes.
 
 ## El problema y la propuesta
 
@@ -36,7 +38,7 @@ Mapeo basado en el plan de trabajo recibido para el hackathon:
 
 | Línea del eje | Entrega y estado |
 | --- | --- |
-| Monitor de la red industrial de una base ficticia | Simulador, API, 12 dispositivos iniciales y catálogo geográfico; vista Mapa pendiente de integrar |
+| Monitor de la red industrial de una base ficticia | Simulador, API, 12 dispositivos iniciales, catálogo geográfico y mapamundi con rutas en vivo |
 | Asistente en español para resumir, clasificar y priorizar alertas | Reglas asignan severidad; Ollama explica alertas graves y resume el turno con fallback |
 | Correlación de eventos para reconstruir la secuencia de un ataque | Guion IoT y alerta crítica a los 65 s; correlación temporal sin vínculo causal verificado |
 | Infraestructura propia y control de los datos | Backend, SQLite y modelo local; instalar dependencias y descargar el modelo antes de desconectarse |
@@ -48,11 +50,11 @@ correlador actual, detallada en el [pitch](docs/pitch.md), y no prueba una exfil
 
 | Condición común del plan | Cobertura |
 | --- | --- |
-| Software puro y demo funcional | Backend ejecutable; demo visual completa pendiente de Persona A |
+| Software puro y demo funcional | Backend ejecutable y frontend mínimo; globo y controles completos pendientes de Persona A |
 | Datos simulados o públicos | Base y tráfico ficticios; referencias de infraestructura con alcance documentado |
 | IA ejecutada en infraestructura propia | Ollama local opcional, sin API de IA externa |
 | Repositorio, README y pitch de tres minutos | Este repositorio y [guion del pitch](docs/pitch.md) |
-| Interfaz en español | Datos, alertas y documentación en español; interfaz visual pendiente |
+| Interfaz en español | Datos, alertas, documentación y frontend mínimo en español |
 
 ## Requisitos
 
@@ -78,6 +80,7 @@ python3 -m venv .venv
 cd backend && ../.venv/bin/python -m uvicorn trace.app:app --reload --port 8000
 ```
 
+- Interfaz: http://localhost:8000
 - API y docs: http://localhost:8000/docs
 - WebSocket de eventos: `ws://localhost:8000/ws/flujos`
 
@@ -90,7 +93,7 @@ Variables de entorno útiles:
 | `TRACE_OLLAMA_URL` | `http://localhost:11434` | Endpoint de Ollama |
 | `TRACE_OLLAMA_MODELO` | `qwen2.5:7b` | Modelo preferido |
 | `TRACE_OLLAMA_TIMEOUT` | `12` | Timeout en segundos antes del fallback |
-| `TRACE_OLLAMA_TIMEOUT_PRIORITARIO` | `45` | Timeout para alertas graves y resumen de turno |
+| `TRACE_OLLAMA_TIMEOUT_PRIORITARIO` | `90` | Timeout para alertas graves y resumen de turno |
 
 ## Guiones
 
@@ -167,5 +170,5 @@ cada paquete. Un hop marcado `observado` también es simulado en esta demo.
 La confianza de ruta es una heurística del trazador, no una probabilidad calibrada.
 El código no ejecuta las acciones sugeridas por la IA.
 
-El ensayo visual, el rendimiento del globo y la prueba en modo avión quedan pendientes
-hasta integrar el frontend. El pitch distingue esa demo objetivo de lo disponible por API.
+El ensayo de tres minutos y la prueba en modo avión quedan pendientes. El pitch distingue
+la demo objetivo con globo de lo disponible en el frontend mínimo y por API.
