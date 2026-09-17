@@ -28,7 +28,7 @@ VENTANA_METRICAS_S = 5.0
 VENTANA_DESTINOS_S = 300.0
 MAX_PAQUETES = 200
 MAX_FLUJOS_RECORDADOS = 400
-SEVERIDAD_MINIMA_IA = {"media", "alta", "critica"}
+SEVERIDAD_MINIMA_IA = {"alta", "critica"}
 
 
 class Motor:

@@ -8,8 +8,11 @@ Este repositorio contiene, por ahora, el **backend** (Persona B).
 ## Requisitos
 
 - Python 3.10+
-- Opcional: [Ollama](https://ollama.com) local con `qwen2.5:7b` (si no está, todas las
-  explicaciones salen de plantillas en español rioplatense).
+- Opcional: [Ollama](https://ollama.com) local con `qwen2.5:7b` (`ollama pull qwen2.5:7b`).
+  Si no está, todas las explicaciones salen de plantillas en español rioplatense.
+  En CPU el modelo tarda ~8 s por respuesta: sólo se mandan al modelo las alertas altas y
+  críticas, de a una por vez, y la interfaz nunca espera (la alerta sale con plantilla y se
+  reemite cuando el modelo contesta).
 
 ## Cómo correrlo
 
@@ -30,7 +33,8 @@ Variables de entorno útiles:
 | `TRACE_DB` | `backend/trace.db` | Ruta o URL SQLAlchemy de la base de alertas |
 | `TRACE_OLLAMA_URL` | `http://localhost:11434` | Endpoint de Ollama |
 | `TRACE_OLLAMA_MODELO` | `qwen2.5:7b` | Modelo preferido |
-| `TRACE_OLLAMA_TIMEOUT` | `4` | Timeout en segundos antes del fallback |
+| `TRACE_OLLAMA_TIMEOUT` | `12` | Timeout en segundos antes del fallback |
+| `TRACE_OLLAMA_TIMEOUT_PRIORITARIO` | `45` | Timeout para alertas graves y resumen de turno |
 
 ## Guiones
 

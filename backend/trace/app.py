@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import contextlib
 import os
 
@@ -20,11 +21,13 @@ async def ciclo_de_vida(app: FastAPI):
     motor = Motor()
     app.state.motor = motor
     await motor.asistente.verificar()
+    tarea_precalentado = asyncio.create_task(motor.asistente.precalentar())
     if GUION_INICIAL in motor.catalogo.guiones:
         await motor.lanzar(GUION_INICIAL)
     try:
         yield
     finally:
+        tarea_precalentado.cancel()
         await motor.detener()
 
 

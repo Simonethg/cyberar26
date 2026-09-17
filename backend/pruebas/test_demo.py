@@ -83,8 +83,9 @@ def test_el_websocket_manda_el_estado_inicial(cliente):
 
 
 def test_reconocer_y_cerrar_alertas(cliente):
-    cliente.post("/api/guiones/exfiltracion-iot/lanzar")
     motor = cliente.app.state.motor
+    cliente.post("/api/guiones/detener")
+    motor.preparar("exfiltracion-iot")  # sin bucle de fondo: los pasos los da la prueba
     for _ in range(4 * 70):
         motor.paso()
     alertas = cliente.get("/api/alertas").json()

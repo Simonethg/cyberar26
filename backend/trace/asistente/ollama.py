@@ -6,6 +6,7 @@ contesta dentro del timeout, se reemplaza la explicación y se reemite.
 
 from __future__ import annotations
 
+import asyncio
 import json
 import os
 
@@ -16,12 +17,15 @@ from ..esquemas import Alerta, ResumenTurno
 URL_OLLAMA = os.environ.get("TRACE_OLLAMA_URL", "http://localhost:11434")
 MODELO = os.environ.get("TRACE_OLLAMA_MODELO", "qwen2.5:7b")
 MODELO_ALTERNATIVO = os.environ.get("TRACE_OLLAMA_MODELO_ALT", "llama3.1:8b")
-TIMEOUT_S = float(os.environ.get("TRACE_OLLAMA_TIMEOUT", "4"))
+TIMEOUT_S = float(os.environ.get("TRACE_OLLAMA_TIMEOUT", "12"))
+# Las alertas graves y el resumen de turno merecen esperar la cola del modelo.
+TIMEOUT_PRIORITARIO_S = float(os.environ.get("TRACE_OLLAMA_TIMEOUT_PRIORITARIO", "45"))
 
 SISTEMA = (
     "Sos un analista de SOC argentino. Explicá la alerta en dos oraciones en español "
     "rioplatense, con voseo, sin tecnicismos innecesarios, y proponé una acción concreta. "
-    "No inventes datos que no estén en la evidencia. Respondé sólo un JSON con las claves "
+    "No inventes datos que no estén en la evidencia y copiá tal cual los nombres de equipos, "
+    "organizaciones y países. Respondé sólo un JSON con las claves "
     '"explicacion" y "accion_sugerida".'
 )
 
@@ -30,6 +34,8 @@ class Asistente:
     def __init__(self) -> None:
         self.conectado = False
         self.modelo = MODELO
+        # En CPU el modelo atiende de a uno: encolar evita que todas las alertas expiren.
+        self._turno = asyncio.Semaphore(1)
 
     async def verificar(self) -> bool:
         try:
@@ -51,9 +57,18 @@ class Asistente:
             self.modelo = modelos[0]
         return self.conectado
 
-    async def _generar(self, prompt: str, sistema: str = SISTEMA) -> str | None:
+    async def _generar(
+        self,
+        prompt: str,
+        sistema: str = SISTEMA,
+        timeout: float = TIMEOUT_S,
+    ) -> str | None:
+        async with self._turno:
+            return await self._pedir(prompt, sistema, timeout)
+
+    async def _pedir(self, prompt: str, sistema: str, timeout: float) -> str | None:
         try:
-            async with httpx.AsyncClient(timeout=TIMEOUT_S) as cliente:
+            async with httpx.AsyncClient(timeout=timeout) as cliente:
                 respuesta = await cliente.post(
                     f"{URL_OLLAMA}/api/generate",
                     json={
@@ -66,16 +81,28 @@ class Asistente:
                 )
                 respuesta.raise_for_status()
                 return respuesta.json().get("response", "").strip()
+        except httpx.TimeoutException:
+            # En CPU el modelo puede tardar de más sin estar caído.
+            return None
         except Exception:
             self.conectado = False
             return None
+
+    async def precalentar(self) -> None:
+        """Carga el modelo en memoria para que la primera alerta no espere de más."""
+        if self.conectado:
+            await self._generar("Respondé sólo: ok", sistema="Respondé sólo: ok")
 
     async def explicar(self, alerta: Alerta) -> Alerta:
         """Devuelve la alerta con la explicación del modelo, o la plantilla si no responde."""
         carga = alerta.model_dump(include={
             "regla", "severidad", "titulo", "dispositivo_id", "evidencia", "explicacion",
         })
-        texto = await self._generar(json.dumps(carga, ensure_ascii=False))
+        prioritaria = alerta.severidad in ("critica", "alta")
+        texto = await self._generar(
+            json.dumps(carga, ensure_ascii=False),
+            timeout=TIMEOUT_PRIORITARIO_S if prioritaria else TIMEOUT_S,
+        )
         if not texto:
             alerta.fuente_explicacion = "plantilla"
             return alerta
@@ -109,6 +136,7 @@ class Asistente:
                 "rioplatense, con voseo, para el jefe de turno: qué pasó, qué es lo más urgente "
                 "y qué conviene hacer. No inventes datos. Respondé sólo el párrafo, sin JSON."
             ),
+            timeout=TIMEOUT_PRIORITARIO_S,
         )
         if not texto:
             return ResumenTurno(texto=plantilla, fuente="plantilla")
