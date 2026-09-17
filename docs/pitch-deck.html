@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>TRACE — Pitch deck · CYBER.AR 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --bg:#0B1220; --panel:#111A2E; --borde:#1E2A44; --texto:#E6EDF7; --muted:#8A9AB8;
+    --azul:#3B82F6; --verde:#22C55E; --ambar:#F59E0B; --rojo:#EF4444; --celeste:#67E8F9;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:#000;color:var(--texto);
+    font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  body{overflow:hidden}
+  .deck{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+  .slide{position:absolute;width:1280px;height:720px;background:var(--bg);border-radius:0;
+    padding:64px 80px;display:none;flex-direction:column;overflow:hidden;
+    background-image:radial-gradient(1200px 500px at 85% -10%,rgba(59,130,246,.18),transparent 60%),
+                     radial-gradient(800px 400px at -10% 110%,rgba(34,197,94,.10),transparent 60%);}
+  .slide.activa{display:flex}
+  .marca{position:absolute;left:80px;bottom:36px;display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px;letter-spacing:.06em}
+  .marca b{color:var(--texto);letter-spacing:.22em;font-weight:800}
+  .num{position:absolute;right:80px;bottom:36px;color:var(--muted);font-size:14px}
+  .tiempo{position:absolute;right:80px;top:36px;color:var(--muted);font-size:13px;letter-spacing:.08em;
+    border:1px solid var(--borde);border-radius:999px;padding:4px 12px;background:rgba(17,26,46,.7)}
+  .banner{position:absolute;left:0;right:0;top:0;height:26px;background:rgba(245,158,11,.10);border-bottom:1px solid rgba(245,158,11,.35);
+    color:var(--ambar);font-size:12px;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px}
+  h1{font-size:88px;line-height:1;margin:0;letter-spacing:.14em;font-weight:900}
+  h2{font-size:44px;line-height:1.1;margin:0 0 28px;font-weight:800;letter-spacing:-.01em}
+  h2 small{display:block;font-size:18px;color:var(--azul);letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+  p{font-size:24px;line-height:1.45;margin:0 0 16px;color:#C7D2E5}
+  .grande{font-size:34px;line-height:1.3;color:var(--texto);font-weight:600}
+  .acento{color:var(--azul)} .ok{color:var(--verde)} .warn{color:var(--ambar)} .mal{color:var(--rojo)}
+  .cols{display:grid;gap:28px;flex:1}
+  .c2{grid-template-columns:1fr 1fr} .c3{grid-template-columns:1fr 1fr 1fr} .c4{grid-template-columns:repeat(4,1fr)}
+  .card{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:22px 24px}
+  .card h3{margin:0 0 8px;font-size:20px;font-weight:700}
+  .card p{font-size:18px;margin:0;color:#B4C0D8;line-height:1.4}
+  .card .ico{display:inline-block;font:700 12px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.12em;color:var(--azul);border:1px solid var(--azul);border-radius:6px;padding:5px 8px;margin-bottom:12px}
+  .kpi{display:flex;flex-direction:column;gap:4px}
+  .kpi b{font-size:52px;font-weight:900;line-height:1;color:var(--texto)}
+  .kpi span{font-size:15px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  table{width:100%;border-collapse:collapse;font-size:19px}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--borde);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+  td:first-child{color:#B4C0D8}
+  .tag{display:inline-block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid}
+  .tag.azul{color:var(--azul);border-color:var(--azul)} .tag.verde{color:var(--verde);border-color:var(--verde)}
+  .tag.ambar{color:var(--ambar);border-color:var(--ambar)} .tag.rojo{color:var(--rojo);border-color:var(--rojo)}
+  .timeline{display:flex;align-items:stretch;gap:0;margin-top:20px;flex:1}
+  .paso{flex:1;position:relative;padding:26px 22px 0 0}
+  .paso::before{content:"";position:absolute;left:0;right:0;top:8px;height:3px;background:var(--borde)}
+  .paso::after{content:"";position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:var(--azul);box-shadow:0 0 0 6px rgba(59,130,246,.2)}
+  .paso.critico::after{background:var(--rojo);box-shadow:0 0 0 8px rgba(239,68,68,.25)}
+  .paso.critico::before{background:linear-gradient(90deg,var(--borde),var(--rojo))}
+  .paso .t{font-size:14px;color:var(--muted);letter-spacing:.1em;font-family:ui-monospace,Menlo,monospace}
+  .paso h3{margin:6px 0 6px;font-size:22px}
+  .paso p{font-size:17px;margin:0;color:#B4C0D8}
+  .cita{font-size:30px;line-height:1.4;font-weight:600;border-left:4px solid var(--azul);padding-left:26px;margin:10px 0 24px;color:var(--texto)}
+  .arq{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;line-height:1.5;color:#B4C0D8;background:var(--panel);
+    border:1px solid var(--borde);border-radius:12px;padding:18px 22px;white-space:pre;margin:0}
+  .arq b{color:var(--texto)} .arq i{color:var(--azul);font-style:normal} .arq u{color:var(--verde);text-decoration:none}
+  .fila{display:flex;gap:28px;flex:1;align-items:stretch}
+  .fila>*{flex:1}
+  ul.lista{list-style:none;padding:0;margin:0;font-size:22px;line-height:1.5}
+  ul.lista li{padding:8px 0 8px 36px;position:relative;color:#C7D2E5}
+  ul.lista li::before{content:"";position:absolute;left:8px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--azul)}
+  ul.lista li.ok::before{background:var(--verde)} ul.lista li.mal::before{background:var(--rojo)}
+  .mapa{width:100%;height:100%}
+  .notas{position:fixed;left:0;right:0;bottom:0;background:rgba(0,0,0,.92);color:#E6EDF7;padding:18px 40px;font-size:18px;line-height:1.5;
+    border-top:2px solid var(--ambar);display:none;max-height:38vh;overflow:auto;z-index:10}
+  .notas.visible{display:block}
+  .notas b{color:var(--ambar)}
+  .ayuda{position:fixed;left:16px;top:12px;color:#5b6a86;font-size:12px;z-index:9}
+  @media print{
+    @page{size:1280px 720px;margin:0}
+    html,body{background:var(--bg);overflow:visible}
+    .deck{position:static;display:block}
+    .slide{position:relative;display:flex !important;page-break-after:always;break-after:page;width:1280px;height:720px}
+    .notas,.ayuda{display:none !important}
+  }
+</style>
+</head>
+<body>
+<div class="ayuda">← → cambiar · N notas · F pantalla completa</div>
+<div class="deck">
+
+<!-- 1 · Portada -->
+<section class="slide" data-t="0:00" data-notas="Slide de portada mientras entra el jurado. No se habla sobre ella: se arranca directamente con el problema.">
+  <div class="banner">Entorno de entrenamiento · Base Aérea El Chañar · tráfico simulado</div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:26px">
+    <div style="display:flex;align-items:center;gap:22px">
+      <svg width="86" height="86" viewBox="0 0 86 86" fill="none"><circle cx="43" cy="43" r="40" stroke="#3B82F6" stroke-width="3"/><path d="M12 56 C 30 20, 56 20, 74 56" stroke="#67E8F9" stroke-width="3" stroke-dasharray="6 6"/><circle cx="12" cy="56" r="5" fill="#22C55E"/><circle cx="74" cy="56" r="5" fill="#EF4444"/><circle cx="43" cy="29" r="4" fill="#F59E0B"/></svg>
+      <h1>TRACE</h1>
+    </div>
+    <p class="grande" style="font-size:42px;margin:0">Mirá adónde van tus datos.</p>
+    <p style="max-width:900px">Monitor de tráfico de red con visualización geográfica, detección explicable y asistente en castellano — todo corriendo en una notebook, sin internet.</p>
+    <div style="display:flex;gap:12px;margin-top:10px">
+      <span class="tag azul">Hackathon CYBER.AR 2026</span>
+      <span class="tag verde">Eje 2 · IA para la defensa de redes</span>
+      <span class="tag ambar">+ modo entrenamiento (Eje 3)</span>
+    </div>
+  </div>
+  <div class="marca"><b>TRACE</b> · github.com/Simonethg/cyberar26</div>
+</section>
+
+<!-- 2 · El problema -->
+<section class="slide" data-t="0:00 – 0:25" data-notas="<b>El problema (25 s).</b> «Un mensaje que mandás desde Buenos Aires a alguien que está en Buenos Aires puede pasar por Miami, por Virginia y por Ámsterdam antes de llegar. Cada salto es una jurisdicción distinta y una empresa distinta con el dato pasando por sus fierros. Hoy, en una unidad, nadie ve eso. Nosotros lo mostramos.» → Cambiar a TRACE, el globo ya está girando.">
+  <div class="tiempo">0:00 – 0:25</div>
+  <h2><small>El problema</small>De Buenos Aires a Buenos Aires… por Miami, Virginia y Ámsterdam.</h2>
+  <div class="fila">
+    <div style="flex:1.4">
+      <svg class="mapa" viewBox="0 0 720 360" fill="none">
+        <defs><filter id="g"><feGaussianBlur stdDeviation="3"/></filter></defs>
+        <rect width="720" height="360" rx="12" fill="#0E172B" stroke="#1E2A44"/>
+        <g stroke="#1E2A44" stroke-width="1">
+          <path d="M0 60H720M0 120H720M0 180H720M0 240H720M0 300H720M90 0V360M180 0V360M270 0V360M360 0V360M450 0V360M540 0V360M630 0V360"/>
+        </g>
+        <!-- rutas -->
+        <path d="M200 300 C 150 200, 160 130, 210 100" stroke="#3B82F6" stroke-width="3"/>
+        <path d="M210 100 C 250 70, 300 70, 330 90" stroke="#3B82F6" stroke-width="3" stroke-dasharray="7 7"/>
+        <path d="M330 90 C 420 40, 520 40, 590 80" stroke="#67E8F9" stroke-width="3" stroke-dasharray="7 7"/>
+        <path d="M590 80 C 540 190, 420 260, 300 300" stroke="#3B82F6" stroke-width="3"/>
+        <!-- glow -->
+        <circle cx="200" cy="300" r="10" fill="#22C55E" opacity=".35" filter="url(#g)"/>
+        <!-- nodos -->
+        <circle cx="200" cy="300" r="6" fill="#22C55E"/><text x="170" y="332" fill="#E6EDF7" font-size="15" font-weight="700">Buenos Aires</text><text x="170" y="349" fill="#8A9AB8" font-size="12">AR · origen</text>
+        <circle cx="210" cy="100" r="6" fill="#F59E0B"/><text x="130" y="92" fill="#E6EDF7" font-size="15" font-weight="700">Miami</text><text x="130" y="109" fill="#8A9AB8" font-size="12">US · IXP</text>
+        <circle cx="330" cy="90" r="6" fill="#F59E0B"/><text x="300" y="72" fill="#E6EDF7" font-size="15" font-weight="700">Virginia</text><text x="300" y="130" fill="#8A9AB8" font-size="12">US · data center</text>
+        <circle cx="590" cy="80" r="6" fill="#F59E0B"/><text x="560" y="62" fill="#E6EDF7" font-size="15" font-weight="700">Ámsterdam</text><text x="560" y="115" fill="#8A9AB8" font-size="12">NL · CDN</text>
+        <circle cx="300" cy="300" r="6" fill="#EF4444"/><text x="315" y="298" fill="#E6EDF7" font-size="15" font-weight="700">Buenos Aires</text><text x="315" y="314" fill="#8A9AB8" font-size="12">AR · destinatario (a 20 cuadras)</text>
+        <text x="20" y="345" fill="#5b6a86" font-size="12">— observado   - - - inferido</text>
+      </svg>
+    </div>
+    <div>
+      <ul class="lista">
+        <li>Cada salto es <b>otra jurisdicción</b> y <b>otra empresa</b> con el dato pasando por sus fierros.</li>
+        <li>Cada salto es también un punto donde una anomalía puede indicar <b>exfiltración</b>, un equipo comprometido o un desvío de ruta.</li>
+        <li class="mal">Hoy, en una unidad, <b>nadie ve eso.</b></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marca"><b>TRACE</b></div><div class="num">2</div>
+</section>
+
+<!-- 3 · Herramientas de hoy -->
+<section class="slide" data-t="apoyo" data-notas="Slide de apoyo (no está en el guion hablado; sirve para el minuto de preguntas: «¿en qué se diferencia de un SIEM o de Wireshark?»). Wireshark muestra paquetes: para el que ya sabe. Un SIEM muestra logs correlacionados: para el analista. TRACE muestra geografía, entidades y jurisdicción: para el que tiene que tomar una decisión y no es técnico. Complementario, no reemplazo.">
+  <div class="tiempo">Apoyo · preguntas</div>
+  <h2><small>Lo que hay hoy</small>Herramientas para expertos, o cajas negras.</h2>
+  <div class="cols c3">
+    <div class="card"><span class="ico">PCAP</span><h3>Wireshark · Zeek</h3><p>Muestran <b>paquetes</b>, no geografía ni entidades. Sirven al que ya sabe leerlos.</p></div>
+    <div class="card"><span class="ico">SIEM</span><h3>SIEM</h3><p>Logs correlacionados para el <b>analista</b>. Un jefe de turno no abre un SIEM.</p></div>
+    <div class="card"><span class="ico">EDR</span><h3>Antivirus / EDR</h3><p>«Bloqueamos 3 amenazas». <b>Opaco</b>: no explica qué, ni por dónde, ni bajo qué ley.</p></div>
+  </div>
+  <p class="cita" style="margin-top:28px">Ninguna muestra <span class="acento">el viaje</span> de forma que un oficial no técnico lo entienda de un vistazo.</p>
+  <div class="marca"><b>TRACE</b></div><div class="num">3</div>
+</section>
+
+<!-- 4 · Qué es TRACE -->
+<section class="slide" data-t="0:25 – 1:05" data-notas="<b>Qué es TRACE (40 s) — en vivo, vista Mapa, guion normal.</b> «Esto es TRACE. La red de una base ficticia, doce dispositivos, en vivo. Cada arco es un flujo de datos saliendo de la base.» Click en un arco → Ruta: «No mostramos sólo el destino: mostramos el camino. Sale por el proveedor, pasa por el IXP de Buenos Aires, baja a Las Toninas, cruza el Atlántico por un cable submarino. Los saltos inferidos van punteados: no prometemos lo que no sabemos.» Pestaña Inteligencia: «Y acá está lo que nadie te dice: bajo qué ley queda tu dato en cada salto.» <b>Operador: lanzar exfiltracion-iot a los 0:25.</b>">
+  <div class="tiempo">0:25 – 1:05 · demo en vivo</div>
+  <h2><small>La solución</small>TRACE muestra el viaje del dato, no el paquete.</h2>
+  <div class="cols c4">
+    <div class="card"><span class="ico">MAPA</span><h3>Globo en vivo</h3><p>Cada flujo es un arco: dispositivo → ISP → IXP → cable submarino → data center. Observado continuo, inferido punteado.</p></div>
+    <div class="card"><span class="ico">LEY</span><h3>Jurisdicción</h3><p>Por cada salto: qué organización, qué ASN, qué país y bajo qué ley queda el dato.</p></div>
+    <div class="card"><span class="ico">ALERTA</span><h3>Alertas explicables</h3><p>5 reglas con valores y línea de base por dispositivo. Ninguna alerta dice sólo «anomalía».</p></div>
+    <div class="card"><span class="ico">IA</span><h3>Asistente local</h3><p>Un modelo abierto en la notebook explica cada alerta en castellano y propone una acción.</p></div>
+  </div>
+  <div style="display:flex;gap:40px;margin-top:26px">
+    <div class="kpi"><b>12</b><span>dispositivos de la base</span></div>
+    <div class="kpi"><b>71</b><span>nodos de infraestructura</span></div>
+    <div class="kpi"><b>8</b><span>cables submarinos</span></div>
+    <div class="kpi"><b>13</b><span>IXPs · 14 data centers</span></div>
+    <div class="kpi"><b>0</b><span>pedidos a internet</span></div>
+  </div>
+  <div class="marca"><b>TRACE</b></div><div class="num">4</div>
+</section>
+
+<!-- 5 · Cómo funciona -->
+<section class="slide" data-t="apoyo" data-notas="Slide de apoyo para preguntas técnicas. Guion JSON → simulador determinístico (misma semilla, misma demo) → ruteo por topología pública → detección por reglas → asistente Ollama con fallback a plantillas → WebSocket → interfaz. Backend FastAPI + SQLite. Frontend servido por el mismo servidor. Pregunta «¿cómo sabés la ruta sin traceroute?»: los hops se infieren de la topología pública (IXPs, cables, data centers); por eso distinguimos observado/inferido y mostramos confianza de ruta.">
+  <div class="tiempo">Apoyo · preguntas</div>
+  <h2><small>Cómo funciona</small>Del guion al globo, todo en una máquina.</h2>
+  <div class="fila">
+<pre class="arq"><b>datos/</b> guiones/*.json · infraestructura · organizaciones · cables
+   │
+   ▼
+<b>simulador</b>   guion + semilla → flujos con timing        <u>determinístico</u>
+   │
+<b>ruteo</b>       destino → hops (router→ISP→IXP→cable→DC)  <u>topología pública</u>
+   │
+<b>detección</b>   5 reglas explicables + línea de base      <u>evidencia, no puntaje</u>
+   │           dispositivo_nuevo · destino_nuevo · asn_desconocido
+   │           volumen_inusual · cambio_ruta → <i>secuencia_exfiltracion</i>
+   ▼
+<b>asistente</b>   Ollama <i>qwen2.5:7b</i> local → castellano      <u>fallback a plantillas</u>
+   │
+<b>FastAPI</b>     REST + WebSocket /ws/flujos · SQLite · PDF · CSV
+   │
+   ▼
+<b>interfaz</b>    globo · alertas · resumen de turno · guiones</pre>
+    <div>
+      <ul class="lista">
+        <li><b>Determinismo:</b> misma semilla, misma demo. Se ensaya diez veces y sale igual.</li>
+        <li><b>La IA no decide, explica.</b> La detección es de reglas; si el modelo no contesta la alerta sigue siendo correcta.</li>
+        <li><b>Todo versionado:</b> datos, contratos, guiones y código en el repo, con sus commits.</li>
+        <li><b>Stack:</b> Python · FastAPI · SQLite · Ollama · HTML/JS. Dependencias MIT/Apache.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="marca"><b>TRACE</b></div><div class="num">5</div>
+</section>
+
+<!-- 6 · Clímax -->
+<section class="slide" data-t="1:05 – 1:55" data-notas="<b>El clímax (50 s) — en vivo.</b> «Ahora miren el sensor de acceso 3.» (Salta la alerta, el arco se pone rojo.) «Nunca en su vida había hablado con un servidor en Países Bajos. Mandó 17 megas en dos minutos. Su promedio es 120 kilobytes por hora.» Click en la alerta. «El asistente —un modelo abierto corriendo en esta notebook, no en una nube— lo explica en castellano y propone una acción: aislar el dispositivo. Y acá está lo importante: correlacionó tres eventos separados. Apareció un equipo sin dar de alta, después un destino nuevo, después un volumen anómalo. Todo en menos de tres minutos. Eso es la secuencia del ataque reconstruida, que es exactamente lo que pide el Eje 2.»">
+  <div class="tiempo">1:05 – 1:55 · demo en vivo</div>
+  <h2><small>Escenario: exfiltración desde un sensor IoT</small>Tres eventos sueltos. Una secuencia de ataque.</h2>
+  <div class="timeline">
+    <div class="paso"><div class="t">t = 20 s</div><h3>Dispositivo nuevo</h3><p>Se conecta un equipo sin dar de alta en la red de la base.</p><span class="tag ambar" style="margin-top:10px">info</span></div>
+    <div class="paso"><div class="t">t = 45 s</div><h3>Destino nuevo</h3><p>El sensor de acceso 3 habla por primera vez con un servidor en Países Bajos, ASN desconocido.</p><span class="tag ambar" style="margin-top:10px">alta</span></div>
+    <div class="paso"><div class="t">t ≈ 60 s</div><h3>Volumen anómalo</h3><p>17 MB en dos minutos. Su línea de base: 120 KB por hora.</p><span class="tag ambar" style="margin-top:10px">alta</span></div>
+    <div class="paso critico"><div class="t">t = 65 s</div><h3 class="mal">secuencia_exfiltracion</h3><p>Correlación de los tres eventos. El asistente lo explica en castellano y propone: <b>aislar el dispositivo</b>.</p><span class="tag rojo" style="margin-top:10px">crítica</span></div>
+  </div>
+  <p class="cita" style="font-size:26px;margin-top:0">«Correlación de eventos para reconstruir la secuencia de un ataque» — línea textual del Eje 2.</p>
+  <p style="font-size:16px;color:var(--muted);margin:0">Guion <code>exfiltracion-iot</code> · 180 s · semilla fija. La alerta crítica cae a los 65 s de lanzado; el operador lo lanza a los 0:25 del pitch para que aparezca cerca de 1:30.</p>
+  <div class="marca"><b>TRACE</b></div><div class="num">6</div>
+</section>
+
+<!-- 7 · Para el que no es técnico -->
+<section class="slide" data-t="1:55 – 2:20" data-notas="<b>Para el que no es técnico (25 s) — pestaña Alertas.</b> «Pero el jefe de turno no es analista de seguridad.» Click en «Resumime el turno». «Dos oraciones: qué pasó, qué es urgente, qué hacer.» Click en Reconocer en la alerta crítica: el contador rojo baja. «Reconoce, y eso queda registrado.» Si se va largo de tiempo, este bloque es el que se saltea.">
+  <div class="tiempo">1:55 – 2:20 · demo en vivo</div>
+  <h2><small>Para el que decide</small>El jefe de turno no es analista de seguridad.</h2>
+  <div class="cols c3">
+    <div class="card"><span class="ico">TURNO</span><h3>Resumime el turno</h3><p>Un párrafo en rioplatense: qué pasó, qué es urgente, qué hacer. Dice si lo escribió el modelo o la plantilla.</p></div>
+    <div class="card"><span class="ico">OK</span><h3>Reconocer / cerrar</h3><p>Cada acción queda registrada. Lo que el operador descarta alimenta la línea de base.</p></div>
+    <div class="card"><span class="ico">PDF</span><h3>Informe del turno</h3><p>PDF con tráfico, destinos por país, alertas y el resumen del asistente. CSV que abre bien en Excel.</p></div>
+  </div>
+  <div class="card" style="margin-top:26px;border-color:rgba(59,130,246,.5)">
+    <p style="font-size:21px;color:var(--texto)"><span class="acento" style="font-weight:700">Ejemplo de alerta explicada ·</span> «El sensor de acceso 3 nunca había hablado con un servidor en Países Bajos. Mandó 17 MB en 2 minutos; su promedio es 120 KB por hora.» <span class="muted" style="color:var(--muted)">→ Acción sugerida: aislar el dispositivo de la red y revisar su firmware.</span></p>
+  </div>
+  <div class="marca"><b>TRACE</b></div><div class="num">7</div>
+</section>
+
+<!-- 8 · Soberanía -->
+<section class="slide" data-t="2:20 – 2:40" data-notas="<b>Soberanía (20 s) — modo avión en vivo.</b> Apagar el Wi-Fi desde la barra del sistema, a la vista del jurado. Recargar con F5. «Miren esto. Corto internet. Recargo. Sigue andando todo: el globo, el tráfico, las alertas, y la IA. Cero servicios externos. Ni un pedido afuera de esta máquina. Eso es lo que el pliego llama soberanía tecnológica, y acá está, funcionando.» Si Ollama no responde: «hoy está respondiendo con las plantillas; el sistema nunca se cuelga esperando a la IA y te dice cuál de las dos te contestó».">
+  <div class="tiempo">2:20 – 2:40 · modo avión en vivo</div>
+  <h2><small>Soberanía tecnológica</small>Cortamos internet. Sigue andando todo.</h2>
+  <div class="fila">
+    <div>
+      <ul class="lista">
+        <li class="ok">Globo, tráfico, alertas y asistente <b>sin una sola petición externa</b>. Verificable en la pestaña Red del navegador.</li>
+        <li class="ok">Modelo abierto <b>qwen2.5:7b</b> con Ollama, en la misma notebook. Ninguna API de nadie del otro lado.</li>
+        <li class="ok">Si el modelo tarda, la alerta sale igual con plantilla y <b>te dice quién contestó</b>. La interfaz nunca espera.</li>
+        <li class="ok">Texturas, fuentes, geodatos e iconos <b>en el bundle</b>. Datos ficticios o públicos: nada sobre sistemas reales.</li>
+      </ul>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
+      <div class="card" style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:20px">Peticiones a internet en ejecución</span><b style="font-size:40px;color:var(--verde)">0</b></div>
+      <div class="card" style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:20px">Modelo de IA</span><b style="font-size:22px">qwen2.5:7b · local</b></div>
+      <div class="card" style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:20px">Respuesta con Ollama caído</span><b style="font-size:22px;color:var(--verde)">&lt; 500 ms · plantilla</b></div>
+    </div>
+  </div>
+  <div class="marca"><b>TRACE</b></div><div class="num">8</div>
+</section>
+
+<!-- 9 · Encaje con el pliego -->
+<section class="slide" data-t="apoyo" data-notas="Slide de apoyo para el jurado: mapeo punto por punto con las líneas de proyecto del Eje 2 y las condiciones comunes del pliego.">
+  <div class="tiempo">Apoyo · jurado</div>
+  <h2><small>Encaje con el pliego</small>Eje 2, línea por línea.</h2>
+  <table>
+    <tr><th>Línea de proyecto del pliego</th><th>Cómo la cubre TRACE</th></tr>
+    <tr><td>«Monitor de la red industrial de una base ficticia»</td><td>Vista Mapa: la red de la Base Aérea El Chañar, 12 dispositivos, en vivo.</td></tr>
+    <tr><td>«Asistente en español para resumir, clasificar y priorizar alertas»</td><td>Panel de alertas + asistente con Ollama local + resumen del turno.</td></tr>
+    <tr><td>«Correlación de eventos para reconstruir la secuencia de un ataque»</td><td>Dispositivo nuevo → destino nuevo → volumen anómalo → <span class="mal">secuencia_exfiltracion</span>.</td></tr>
+    <tr><td>«Ejecución en infraestructura propia, control de los datos»</td><td>Todo en una notebook sin internet, incluido el modelo. Demostrado en modo avión.</td></tr>
+  </table>
+  <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
+    <span class="tag verde">Software puro con demo funcional</span>
+    <span class="tag verde">Datos simulados</span>
+    <span class="tag verde">Nada sobre sistemas reales</span>
+    <span class="tag verde">IA en infraestructura propia</span>
+    <span class="tag verde">Repo + README + pitch</span>
+  </div>
+  <div class="marca"><b>TRACE</b></div><div class="num">9</div>
+</section>
+
+<!-- 10 · Continuidad -->
+<section class="slide" data-t="2:40 – 3:00" data-notas="<b>Continuidad (20 s) — Configuración → Guion.</b> «Y esto no termina el viernes. Los escenarios son archivos JSON: un instructor arma un ejercicio nuevo sin programar. Sirve como monitor de la red de una unidad y como entrenador del personal que la opera.» Pregunta «¿cómo se despliega en una unidad real?»: un servidor en la red de la unidad y un sensor de captura en el switch; el simulador está detrás de una interfaz, enchufarle captura real es reemplazar ese módulo.">
+  <div class="tiempo">2:40 – 3:00</div>
+  <h2><small>Continuidad</small>Esto no termina el viernes.</h2>
+  <div class="cols c3">
+    <div class="card"><span class="ico">AULA</span><h3>Entrenador de personal</h3><p>Los escenarios son JSON: un instructor arma un ejercicio nuevo <b>sin programar</b>. Evaluación con tiempo de detección y alertas reconocidas.</p></div>
+    <div class="card"><span class="ico">PCAP</span><h3>Captura real</h3><p>El simulador está detrás de una interfaz: enchufar un sensor en el switch de la unidad es <b>reemplazar un módulo</b>, no reescribir.</p></div>
+    <div class="card"><span class="ico">ON-PREM</span><h3>Despliegue on-premise</h3><p>Un servidor en la red de la unidad. <b>Ningún componente</b> necesita salir a internet. Complementa al SIEM, no lo reemplaza.</p></div>
+  </div>
+  <p class="cita" style="margin-top:28px">Monitor de la red de una unidad <span class="acento">y</span> entrenador del personal que la opera.</p>
+  <div class="marca"><b>TRACE</b></div><div class="num">10</div>
+</section>
+
+<!-- 11 · Cierre -->
+<section class="slide" data-t="3:00" data-notas="«TRACE. Mirá adónde van tus datos. Gracias.» Dejar esta slide durante el minuto de preguntas.">
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px">
+    <h1 style="font-size:110px">TRACE</h1>
+    <p class="grande" style="font-size:44px;margin:0">Mirá adónde van tus datos.</p>
+    <p style="margin-top:20px;color:var(--muted)">github.com/Simonethg/cyberar26 · Hackathon Nacional de Ciberdefensa CYBER.AR 2026</p>
+    <div style="display:flex;gap:40px;margin-top:10px">
+      <div class="kpi"><b>3</b><span>personas</span></div>
+      <div class="kpi"><b>~10 h</b><span>de hackathon</span></div>
+      <div class="kpi"><b>100 %</b><span>código en el repo</span></div>
+      <div class="kpi"><b>0</b><span>servicios externos</span></div>
+    </div>
+  </div>
+  <div class="marca">Una internet más transparente y segura</div>
+</section>
+
+</div>
+<div class="notas" id="notas"></div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const notas=document.getElementById('notas');
+  let i=Math.max(0,Math.min(slides.length-1,(parseInt(location.hash.slice(1))||1)-1));
+  function escalar(){
+    const s=Math.min(innerWidth/1280,innerHeight/720);
+    slides.forEach(el=>el.style.transform=`scale(${s})`);
+  }
+  function mostrar(n){
+    i=(n+slides.length)%slides.length;
+    slides.forEach((el,k)=>el.classList.toggle('activa',k===i));
+    notas.innerHTML=slides[i].dataset.notas||'';
+    location.hash=i+1;
+  }
+  addEventListener('hashchange',()=>{const n=(parseInt(location.hash.slice(1))||1)-1;if(n!==i)mostrar(n);});
+addEventListener('keydown',e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();mostrar(i+1);}
+    else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();mostrar(i-1);}
+    else if(e.key==='Home')mostrar(0); else if(e.key==='End')mostrar(slides.length-1);
+    else if(e.key.toLowerCase()==='n')notas.classList.toggle('visible');
+    else if(e.key.toLowerCase()==='f'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();}
+  });
+  addEventListener('click',e=>{if(!notas.contains(e.target))mostrar(e.clientX>innerWidth/2?i+1:i-1);});
+  addEventListener('resize',escalar);
+  escalar();mostrar(i);
+</script>
+</body>
+</html>
