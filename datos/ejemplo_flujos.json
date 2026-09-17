@@ -1,0 +1,3077 @@
+[
+  {
+    "id": "2A0001",
+    "ts_inicio": "2026-09-18T09:00:00.000Z",
+    "dispositivo_id": "dev-01",
+    "destino": {
+      "ip": "198.51.100.1",
+      "asn": 24115,
+      "organizacion": "Equinix",
+      "servicio": "Data center e IXP",
+      "ciudad": "Miami",
+      "pais": "US",
+      "lat": 25.78,
+      "lon": -80.2,
+      "nodo_id": "dc-mia"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": null,
+      "aplicacion": "HTTP"
+    },
+    "bytes_subida": 5278,
+    "bytes_bajada": 973912,
+    "paquetes_subida": 3,
+    "paquetes_bajada": 695,
+    "rtt_ms": 122,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-01",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-mia",
+        "latencia_ms": 61,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0002",
+    "ts_inicio": "2026-09-18T09:00:03.000Z",
+    "dispositivo_id": "dev-02",
+    "destino": {
+      "ip": "198.51.100.2",
+      "asn": 16509,
+      "organizacion": "Amazon Web Services",
+      "servicio": "Nube",
+      "ciudad": "Ashburn",
+      "pais": "US",
+      "lat": 39.04,
+      "lon": -77.49,
+      "nodo_id": "dc-iad"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 34098,
+    "bytes_bajada": 2347113,
+    "paquetes_subida": 24,
+    "paquetes_bajada": 1676,
+    "rtt_ms": 136,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-02",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-iad",
+        "latencia_ms": 68,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0003",
+    "ts_inicio": "2026-09-18T09:00:06.000Z",
+    "dispositivo_id": "dev-03",
+    "destino": {
+      "ip": "198.51.100.3",
+      "asn": 15169,
+      "organizacion": "Google",
+      "servicio": "Nube y servicios",
+      "ciudad": "Santiago",
+      "pais": "CL",
+      "lat": -33.46,
+      "lon": -70.65,
+      "nodo_id": "dc-scl"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 98530,
+    "bytes_bajada": 1210528,
+    "paquetes_subida": 70,
+    "paquetes_bajada": 864,
+    "rtt_ms": 86,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-03",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-scl",
+        "latencia_ms": 43,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0004",
+    "ts_inicio": "2026-09-18T09:00:09.000Z",
+    "dispositivo_id": "dev-04",
+    "destino": {
+      "ip": "198.51.100.4",
+      "asn": 24115,
+      "organizacion": "Equinix",
+      "servicio": "Data center e IXP",
+      "ciudad": "Ámsterdam",
+      "pais": "NL",
+      "lat": 52.36,
+      "lon": 4.88,
+      "nodo_id": "dc-ams"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 99080,
+    "bytes_bajada": 5716566,
+    "paquetes_subida": 70,
+    "paquetes_bajada": 4083,
+    "rtt_ms": 166,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-04",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-ams",
+        "latencia_ms": 82,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-ams",
+        "latencia_ms": 83,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0005",
+    "ts_inicio": "2026-09-18T09:00:12.000Z",
+    "dispositivo_id": "dev-05",
+    "destino": {
+      "ip": "198.51.100.5",
+      "asn": 8075,
+      "organizacion": "Microsoft",
+      "servicio": "Nube y ofimática",
+      "ciudad": "Dublín",
+      "pais": "IE",
+      "lat": 53.34,
+      "lon": -6.24,
+      "nodo_id": "dc-dub"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 79397,
+    "bytes_bajada": 769295,
+    "paquetes_subida": 56,
+    "paquetes_bajada": 549,
+    "rtt_ms": 168,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-05",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-lon",
+        "latencia_ms": 81,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-dub",
+        "latencia_ms": 84,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0006",
+    "ts_inicio": "2026-09-18T09:00:15.000Z",
+    "dispositivo_id": "dev-06",
+    "destino": {
+      "ip": "198.51.100.6",
+      "asn": 24115,
+      "organizacion": "Equinix",
+      "servicio": "Data center e IXP",
+      "ciudad": "Singapur",
+      "pais": "SG",
+      "lat": 1.34,
+      "lon": 103.84,
+      "nodo_id": "dc-sin"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 5905,
+    "bytes_bajada": 306612,
+    "paquetes_subida": 4,
+    "paquetes_bajada": 219,
+    "rtt_ms": 222,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-06",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-curie",
+        "latencia_ms": 27,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sin",
+        "latencia_ms": 110,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-sin",
+        "latencia_ms": 111,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0007",
+    "ts_inicio": "2026-09-18T09:00:18.000Z",
+    "dispositivo_id": "dev-07",
+    "destino": {
+      "ip": "198.51.100.7",
+      "asn": 2914,
+      "organizacion": "NTT",
+      "servicio": "Backbone",
+      "ciudad": "Tokio",
+      "pais": "JP",
+      "lat": 35.67,
+      "lon": 139.72,
+      "nodo_id": "dc-nrt"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 32495,
+    "bytes_bajada": 1874068,
+    "paquetes_subida": 23,
+    "paquetes_bajada": 1338,
+    "rtt_ms": 276,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-07",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-curie",
+        "latencia_ms": 27,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sin",
+        "latencia_ms": 110,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-nrt",
+        "latencia_ms": 138,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0008",
+    "ts_inicio": "2026-09-18T09:00:21.000Z",
+    "dispositivo_id": "dev-08",
+    "destino": {
+      "ip": "198.51.100.8",
+      "asn": 7303,
+      "organizacion": "Telecom Argentina",
+      "servicio": "ISP",
+      "ciudad": "Buenos Aires",
+      "pais": "AR",
+      "lat": -34.59,
+      "lon": -58.37,
+      "nodo_id": "dc-bue"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 5478,
+    "bytes_bajada": 5090099,
+    "paquetes_subida": 3,
+    "paquetes_bajada": 3635,
+    "rtt_ms": 40,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-08",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-bue",
+        "latencia_ms": 20,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 1.0,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0009",
+    "ts_inicio": "2026-09-18T09:00:24.000Z",
+    "dispositivo_id": "dev-09",
+    "destino": {
+      "ip": "198.51.100.9",
+      "asn": 22927,
+      "organizacion": "Telefónica",
+      "servicio": "ISP",
+      "ciudad": "Madrid",
+      "pais": "ES",
+      "lat": 40.44,
+      "lon": -3.68,
+      "nodo_id": "dc-mad"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 95850,
+    "bytes_bajada": 1707971,
+    "paquetes_subida": 68,
+    "paquetes_bajada": 1219,
+    "rtt_ms": 150,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-09",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-mad",
+        "latencia_ms": 75,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A000A",
+    "ts_inicio": "2026-09-18T09:00:27.000Z",
+    "dispositivo_id": "dev-10",
+    "destino": {
+      "ip": "198.51.100.10",
+      "asn": 13335,
+      "organizacion": "Cloudflare",
+      "servicio": "CDN",
+      "ciudad": "Miami",
+      "pais": "US",
+      "lat": 25.76,
+      "lon": -80.18,
+      "nodo_id": "nube-cloudflare-mia"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 73426,
+    "bytes_bajada": 5923140,
+    "paquetes_subida": 52,
+    "paquetes_bajada": 4230,
+    "rtt_ms": 122,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-10",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-cloudflare-mia",
+        "latencia_ms": 61,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A000B",
+    "ts_inicio": "2026-09-18T09:00:30.000Z",
+    "dispositivo_id": "dev-11",
+    "destino": {
+      "ip": "198.51.100.11",
+      "asn": 13335,
+      "organizacion": "Cloudflare",
+      "servicio": "CDN",
+      "ciudad": "San Pablo",
+      "pais": "BR",
+      "lat": -23.54,
+      "lon": -46.65,
+      "nodo_id": "nube-cloudflare-gru"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": null,
+      "aplicacion": "HTTP"
+    },
+    "bytes_subida": 60878,
+    "bytes_bajada": 1889189,
+    "paquetes_subida": 43,
+    "paquetes_bajada": 1349,
+    "rtt_ms": 60,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-11",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-cloudflare-gru",
+        "latencia_ms": 30,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A000C",
+    "ts_inicio": "2026-09-18T09:00:33.000Z",
+    "dispositivo_id": "dev-12",
+    "destino": {
+      "ip": "198.51.100.12",
+      "asn": 15169,
+      "organizacion": "Google",
+      "servicio": "Nube y servicios",
+      "ciudad": "Ashburn",
+      "pais": "US",
+      "lat": 39.03,
+      "lon": -77.48,
+      "nodo_id": "nube-google-iad"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 108093,
+    "bytes_bajada": 2373632,
+    "paquetes_subida": 77,
+    "paquetes_bajada": 1695,
+    "rtt_ms": 136,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-12",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-google-iad",
+        "latencia_ms": 68,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A000D",
+    "ts_inicio": "2026-09-18T09:00:36.000Z",
+    "dispositivo_id": "dev-01",
+    "destino": {
+      "ip": "198.51.100.13",
+      "asn": 15169,
+      "organizacion": "Google",
+      "servicio": "Nube y servicios",
+      "ciudad": "Santiago",
+      "pais": "CL",
+      "lat": -33.44,
+      "lon": -70.66,
+      "nodo_id": "nube-google-scl"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 93506,
+    "bytes_bajada": 1379319,
+    "paquetes_subida": 66,
+    "paquetes_bajada": 985,
+    "rtt_ms": 86,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-01",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-google-scl",
+        "latencia_ms": 43,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A000E",
+    "ts_inicio": "2026-09-18T09:00:39.000Z",
+    "dispositivo_id": "dev-02",
+    "destino": {
+      "ip": "198.51.100.14",
+      "asn": 32934,
+      "organizacion": "Meta",
+      "servicio": "Redes sociales",
+      "ciudad": "Ashburn",
+      "pais": "US",
+      "lat": 39.05,
+      "lon": -77.5,
+      "nodo_id": "nube-meta-iad"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 38421,
+    "bytes_bajada": 2894228,
+    "paquetes_subida": 27,
+    "paquetes_bajada": 2067,
+    "rtt_ms": 136,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-02",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-meta-iad",
+        "latencia_ms": 68,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A000F",
+    "ts_inicio": "2026-09-18T09:00:42.000Z",
+    "dispositivo_id": "dev-03",
+    "destino": {
+      "ip": "198.51.100.15",
+      "asn": 16509,
+      "organizacion": "Amazon Web Services",
+      "servicio": "Nube",
+      "ciudad": "Ashburn",
+      "pais": "US",
+      "lat": 39.02,
+      "lon": -77.47,
+      "nodo_id": "nube-amazon-iad"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 102072,
+    "bytes_bajada": 1846182,
+    "paquetes_subida": 72,
+    "paquetes_bajada": 1318,
+    "rtt_ms": 136,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-03",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-amazon-iad",
+        "latencia_ms": 68,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0010",
+    "ts_inicio": "2026-09-18T09:00:45.000Z",
+    "dispositivo_id": "dev-04",
+    "destino": {
+      "ip": "198.51.100.16",
+      "asn": 8075,
+      "organizacion": "Microsoft",
+      "servicio": "Nube y ofimática",
+      "ciudad": "Dublín",
+      "pais": "IE",
+      "lat": 53.36,
+      "lon": -6.27,
+      "nodo_id": "nube-microsoft-dub"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 14156,
+    "bytes_bajada": 897401,
+    "paquetes_subida": 10,
+    "paquetes_bajada": 641,
+    "rtt_ms": 168,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-04",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-lon",
+        "latencia_ms": 81,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-microsoft-dub",
+        "latencia_ms": 84,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0011",
+    "ts_inicio": "2026-09-18T09:00:48.000Z",
+    "dispositivo_id": "dev-05",
+    "destino": {
+      "ip": "198.51.100.17",
+      "asn": 20940,
+      "organizacion": "Akamai",
+      "servicio": "CDN",
+      "ciudad": "Madrid",
+      "pais": "ES",
+      "lat": 40.41,
+      "lon": -3.71,
+      "nodo_id": "nube-akamai-mad"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 49052,
+    "bytes_bajada": 851315,
+    "paquetes_subida": 35,
+    "paquetes_bajada": 608,
+    "rtt_ms": 150,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-05",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-akamai-mad",
+        "latencia_ms": 75,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0012",
+    "ts_inicio": "2026-09-18T09:00:51.000Z",
+    "dispositivo_id": "dev-06",
+    "destino": {
+      "ip": "198.51.100.18",
+      "asn": 714,
+      "organizacion": "Apple",
+      "servicio": "Servicios y nube",
+      "ciudad": "Los Ángeles",
+      "pais": "US",
+      "lat": 34.06,
+      "lon": -118.23,
+      "nodo_id": "nube-apple-lax"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 36671,
+    "bytes_bajada": 5104421,
+    "paquetes_subida": 26,
+    "paquetes_bajada": 3646,
+    "rtt_ms": 160,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-06",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-apple-lax",
+        "latencia_ms": 80,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0013",
+    "ts_inicio": "2026-09-18T09:00:54.000Z",
+    "dispositivo_id": "dev-07",
+    "destino": {
+      "ip": "198.51.100.19",
+      "asn": 62041,
+      "organizacion": "Telegram",
+      "servicio": "Mensajería",
+      "ciudad": "Ámsterdam",
+      "pais": "NL",
+      "lat": 52.35,
+      "lon": 4.91,
+      "nodo_id": "nube-telegram-ams"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 72284,
+    "bytes_bajada": 3893935,
+    "paquetes_subida": 51,
+    "paquetes_bajada": 2781,
+    "rtt_ms": 166,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-07",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-ams",
+        "latencia_ms": 82,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-telegram-ams",
+        "latencia_ms": 83,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0014",
+    "ts_inicio": "2026-09-18T09:00:57.000Z",
+    "dispositivo_id": "dev-08",
+    "destino": {
+      "ip": "198.51.100.20",
+      "asn": 32934,
+      "organizacion": "Meta",
+      "servicio": "Redes sociales",
+      "ciudad": "San Pablo",
+      "pais": "BR",
+      "lat": -23.57,
+      "lon": -46.66,
+      "nodo_id": "nube-whatsapp-gru"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 12328,
+    "bytes_bajada": 3215376,
+    "paquetes_subida": 8,
+    "paquetes_bajada": 2296,
+    "rtt_ms": 60,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-08",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-whatsapp-gru",
+        "latencia_ms": 30,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0015",
+    "ts_inicio": "2026-09-18T09:01:00.000Z",
+    "dispositivo_id": "dev-09",
+    "destino": {
+      "ip": "198.51.100.21",
+      "asn": 2906,
+      "organizacion": "Netflix",
+      "servicio": "Video",
+      "ciudad": "Miami",
+      "pais": "US",
+      "lat": 25.75,
+      "lon": -80.21,
+      "nodo_id": "nube-netflix-mia"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": null,
+      "aplicacion": "HTTP"
+    },
+    "bytes_subida": 110711,
+    "bytes_bajada": 2499357,
+    "paquetes_subida": 79,
+    "paquetes_bajada": 1785,
+    "rtt_ms": 122,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-09",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-netflix-mia",
+        "latencia_ms": 61,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0016",
+    "ts_inicio": "2026-09-18T09:01:03.000Z",
+    "dispositivo_id": "dev-10",
+    "destino": {
+      "ip": "198.51.100.22",
+      "asn": 6057,
+      "organizacion": "ANTEL",
+      "servicio": "ISP e IXP",
+      "ciudad": "Montevideo",
+      "pais": "UY",
+      "lat": -34.88,
+      "lon": -56.17,
+      "nodo_id": "dc-mvd"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 118057,
+    "bytes_bajada": 5228519,
+    "paquetes_subida": 84,
+    "paquetes_bajada": 3734,
+    "rtt_ms": 76,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-10",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-mvd",
+        "latencia_ms": 38,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0017",
+    "ts_inicio": "2026-09-18T09:01:06.000Z",
+    "dispositivo_id": "dev-11",
+    "destino": {
+      "ip": "198.51.100.23",
+      "asn": 24115,
+      "organizacion": "Equinix",
+      "servicio": "Data center e IXP",
+      "ciudad": "Lisboa",
+      "pais": "PT",
+      "lat": 38.73,
+      "lon": -9.14,
+      "nodo_id": "dc-lis"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 27203,
+    "bytes_bajada": 4883180,
+    "paquetes_subida": 19,
+    "paquetes_bajada": 3487,
+    "rtt_ms": 180,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-11",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-lon",
+        "latencia_ms": 81,
+        "observado": true
+      },
+      {
+        "nodo_id": "dc-lis",
+        "latencia_ms": 90,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0018",
+    "ts_inicio": "2026-09-18T09:01:09.000Z",
+    "dispositivo_id": "dev-12",
+    "destino": {
+      "ip": "198.51.100.24",
+      "asn": 13335,
+      "organizacion": "Cloudflare",
+      "servicio": "CDN",
+      "ciudad": "Buenos Aires",
+      "pais": "AR",
+      "lat": -34.61,
+      "lon": -58.36,
+      "nodo_id": "nube-cf-bue"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 8006,
+    "bytes_bajada": 623470,
+    "paquetes_subida": 5,
+    "paquetes_bajada": 445,
+    "rtt_ms": 40,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-12",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-cf-bue",
+        "latencia_ms": 20,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 1.0,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0019",
+    "ts_inicio": "2026-09-18T09:01:12.000Z",
+    "dispositivo_id": "dev-01",
+    "destino": {
+      "ip": "198.51.100.25",
+      "asn": 13335,
+      "organizacion": "Cloudflare",
+      "servicio": "CDN",
+      "ciudad": "Madrid",
+      "pais": "ES",
+      "lat": 40.43,
+      "lon": -3.69,
+      "nodo_id": "nube-cf-mad"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 103327,
+    "bytes_bajada": 1951749,
+    "paquetes_subida": 73,
+    "paquetes_bajada": 1394,
+    "rtt_ms": 150,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-01",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-cf-mad",
+        "latencia_ms": 75,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A001A",
+    "ts_inicio": "2026-09-18T09:01:15.000Z",
+    "dispositivo_id": "dev-02",
+    "destino": {
+      "ip": "198.51.100.26",
+      "asn": 13335,
+      "organizacion": "Cloudflare",
+      "servicio": "CDN",
+      "ciudad": "Santiago",
+      "pais": "CL",
+      "lat": -33.44,
+      "lon": -70.65,
+      "nodo_id": "nube-cf-scl"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 114108,
+    "bytes_bajada": 709343,
+    "paquetes_subida": 81,
+    "paquetes_bajada": 506,
+    "rtt_ms": 86,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-02",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-cf-scl",
+        "latencia_ms": 43,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A001B",
+    "ts_inicio": "2026-09-18T09:01:18.000Z",
+    "dispositivo_id": "dev-03",
+    "destino": {
+      "ip": "198.51.100.27",
+      "asn": 15169,
+      "organizacion": "Google",
+      "servicio": "Nube y servicios",
+      "ciudad": "São Paulo",
+      "pais": "BR",
+      "lat": -23.52,
+      "lon": -46.6,
+      "nodo_id": "nube-goog-sp"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 51823,
+    "bytes_bajada": 887261,
+    "paquetes_subida": 37,
+    "paquetes_bajada": 633,
+    "rtt_ms": 60,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-03",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-goog-sp",
+        "latencia_ms": 30,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A001C",
+    "ts_inicio": "2026-09-18T09:01:21.000Z",
+    "dispositivo_id": "dev-04",
+    "destino": {
+      "ip": "198.51.100.28",
+      "asn": 15169,
+      "organizacion": "Google",
+      "servicio": "Nube y servicios",
+      "ciudad": "Ámsterdam",
+      "pais": "NL",
+      "lat": 52.35,
+      "lon": 4.92,
+      "nodo_id": "nube-goog-ams"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 85320,
+    "bytes_bajada": 3843481,
+    "paquetes_subida": 60,
+    "paquetes_bajada": 2745,
+    "rtt_ms": 166,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-04",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-ams",
+        "latencia_ms": 82,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-goog-ams",
+        "latencia_ms": 83,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A001D",
+    "ts_inicio": "2026-09-18T09:01:24.000Z",
+    "dispositivo_id": "dev-05",
+    "destino": {
+      "ip": "198.51.100.29",
+      "asn": 15169,
+      "organizacion": "Google",
+      "servicio": "Nube y servicios",
+      "ciudad": "Santiago",
+      "pais": "CL",
+      "lat": -33.46,
+      "lon": -70.68,
+      "nodo_id": "nube-goog-scl"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 50520,
+    "bytes_bajada": 1404441,
+    "paquetes_subida": 36,
+    "paquetes_bajada": 1003,
+    "rtt_ms": 86,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-05",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-goog-scl",
+        "latencia_ms": 43,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A001E",
+    "ts_inicio": "2026-09-18T09:01:27.000Z",
+    "dispositivo_id": "dev-06",
+    "destino": {
+      "ip": "198.51.100.30",
+      "asn": 15169,
+      "organizacion": "Google",
+      "servicio": "Nube y servicios",
+      "ciudad": "Tokio",
+      "pais": "JP",
+      "lat": 35.67,
+      "lon": 139.71,
+      "nodo_id": "nube-goog-tyo"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 89841,
+    "bytes_bajada": 1797472,
+    "paquetes_subida": 64,
+    "paquetes_bajada": 1283,
+    "rtt_ms": 276,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-06",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-curie",
+        "latencia_ms": 27,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sin",
+        "latencia_ms": 110,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-goog-tyo",
+        "latencia_ms": 138,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A001F",
+    "ts_inicio": "2026-09-18T09:01:30.000Z",
+    "dispositivo_id": "dev-07",
+    "destino": {
+      "ip": "198.51.100.31",
+      "asn": 32934,
+      "organizacion": "Meta",
+      "servicio": "Redes sociales",
+      "ciudad": "Miami",
+      "pais": "US",
+      "lat": 25.76,
+      "lon": -80.18,
+      "nodo_id": "nube-meta-mia"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": null,
+      "aplicacion": "HTTP"
+    },
+    "bytes_subida": 91593,
+    "bytes_bajada": 5927295,
+    "paquetes_subida": 65,
+    "paquetes_bajada": 4233,
+    "rtt_ms": 122,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-07",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-meta-mia",
+        "latencia_ms": 61,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0020",
+    "ts_inicio": "2026-09-18T09:01:33.000Z",
+    "dispositivo_id": "dev-08",
+    "destino": {
+      "ip": "198.51.100.32",
+      "asn": 32934,
+      "organizacion": "Meta",
+      "servicio": "Redes sociales",
+      "ciudad": "São Paulo",
+      "pais": "BR",
+      "lat": -23.56,
+      "lon": -46.66,
+      "nodo_id": "nube-meta-sp"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 81840,
+    "bytes_bajada": 638967,
+    "paquetes_subida": 58,
+    "paquetes_bajada": 456,
+    "rtt_ms": 60,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-08",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-meta-sp",
+        "latencia_ms": 30,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0021",
+    "ts_inicio": "2026-09-18T09:01:36.000Z",
+    "dispositivo_id": "dev-09",
+    "destino": {
+      "ip": "198.51.100.33",
+      "asn": 32934,
+      "organizacion": "Meta",
+      "servicio": "Redes sociales",
+      "ciudad": "Buenos Aires",
+      "pais": "AR",
+      "lat": -34.62,
+      "lon": -58.39,
+      "nodo_id": "nube-meta-bue"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 72010,
+    "bytes_bajada": 1475615,
+    "paquetes_subida": 51,
+    "paquetes_bajada": 1054,
+    "rtt_ms": 40,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-09",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-meta-bue",
+        "latencia_ms": 20,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 1.0,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0022",
+    "ts_inicio": "2026-09-18T09:01:39.000Z",
+    "dispositivo_id": "dev-10",
+    "destino": {
+      "ip": "198.51.100.34",
+      "asn": 32934,
+      "organizacion": "Meta",
+      "servicio": "Redes sociales",
+      "ciudad": "Londres",
+      "pais": "GB",
+      "lat": 51.52,
+      "lon": -0.14,
+      "nodo_id": "nube-meta-lon"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 23417,
+    "bytes_bajada": 2093622,
+    "paquetes_subida": 16,
+    "paquetes_bajada": 1495,
+    "rtt_ms": 164,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-10",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-lon",
+        "latencia_ms": 81,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-meta-lon",
+        "latencia_ms": 82,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0023",
+    "ts_inicio": "2026-09-18T09:01:42.000Z",
+    "dispositivo_id": "dev-11",
+    "destino": {
+      "ip": "198.51.100.35",
+      "asn": 16509,
+      "organizacion": "Amazon Web Services",
+      "servicio": "Nube",
+      "ciudad": "São Paulo",
+      "pais": "BR",
+      "lat": -23.51,
+      "lon": -46.59,
+      "nodo_id": "nube-aws-sp"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 37382,
+    "bytes_bajada": 3223102,
+    "paquetes_subida": 26,
+    "paquetes_bajada": 2302,
+    "rtt_ms": 60,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-11",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-sp",
+        "latencia_ms": 28,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sao",
+        "latencia_ms": 29,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-aws-sp",
+        "latencia_ms": 30,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.88,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0024",
+    "ts_inicio": "2026-09-18T09:01:45.000Z",
+    "dispositivo_id": "dev-12",
+    "destino": {
+      "ip": "198.51.100.36",
+      "asn": 16509,
+      "organizacion": "Amazon Web Services",
+      "servicio": "Nube",
+      "ciudad": "Dublín",
+      "pais": "IE",
+      "lat": 53.36,
+      "lon": -6.25,
+      "nodo_id": "nube-aws-dub"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 75000,
+    "bytes_bajada": 5812720,
+    "paquetes_subida": 53,
+    "paquetes_bajada": 4151,
+    "rtt_ms": 168,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-12",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-claro",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-lon",
+        "latencia_ms": 81,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-aws-dub",
+        "latencia_ms": 84,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0025",
+    "ts_inicio": "2026-09-18T09:01:48.000Z",
+    "dispositivo_id": "dev-01",
+    "destino": {
+      "ip": "198.51.100.37",
+      "asn": 16509,
+      "organizacion": "Amazon Web Services",
+      "servicio": "Nube",
+      "ciudad": "Frankfurt",
+      "pais": "DE",
+      "lat": 50.1,
+      "lon": 8.66,
+      "nodo_id": "nube-aws-fra"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 44504,
+    "bytes_bajada": 5782960,
+    "paquetes_subida": 31,
+    "paquetes_bajada": 4130,
+    "rtt_ms": 170,
+    "estado": "cerrado",
+    "ruta": [
+      {
+        "nodo_id": "dev-01",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-lon",
+        "latencia_ms": 81,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-aws-fra",
+        "latencia_ms": 85,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0026",
+    "ts_inicio": "2026-09-18T09:01:51.000Z",
+    "dispositivo_id": "dev-02",
+    "destino": {
+      "ip": "198.51.100.38",
+      "asn": 16509,
+      "organizacion": "Amazon Web Services",
+      "servicio": "Nube",
+      "ciudad": "Singapur",
+      "pais": "SG",
+      "lat": 1.32,
+      "lon": 103.84,
+      "nodo_id": "nube-aws-sin"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 109715,
+    "bytes_bajada": 1961394,
+    "paquetes_subida": 78,
+    "paquetes_bajada": 1400,
+    "rtt_ms": 222,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-02",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-curie",
+        "latencia_ms": 27,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-sin",
+        "latencia_ms": 110,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-aws-sin",
+        "latencia_ms": 111,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0027",
+    "ts_inicio": "2026-09-18T09:01:54.000Z",
+    "dispositivo_id": "dev-03",
+    "destino": {
+      "ip": "198.51.100.39",
+      "asn": 8075,
+      "organizacion": "Microsoft",
+      "servicio": "Nube y ofimática",
+      "ciudad": "Ashburn",
+      "pais": "US",
+      "lat": 39.02,
+      "lon": -77.47,
+      "nodo_id": "nube-msft-ash"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 54581,
+    "bytes_bajada": 2686211,
+    "paquetes_subida": 38,
+    "paquetes_bajada": 1918,
+    "rtt_ms": 136,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-03",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telecom",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-sam1",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mia",
+        "latencia_ms": 60,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-msft-ash",
+        "latencia_ms": 68,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  },
+  {
+    "id": "2A0028",
+    "ts_inicio": "2026-09-18T09:01:57.000Z",
+    "dispositivo_id": "dev-04",
+    "destino": {
+      "ip": "198.51.100.40",
+      "asn": 8075,
+      "organizacion": "Microsoft",
+      "servicio": "Nube y ofimática",
+      "ciudad": "Ámsterdam",
+      "pais": "NL",
+      "lat": 52.38,
+      "lon": 4.88,
+      "nodo_id": "nube-msft-ams"
+    },
+    "protocolo": {
+      "transporte": "TCP",
+      "cifrado": "TLS 1.3",
+      "aplicacion": "HTTPS"
+    },
+    "bytes_subida": 29653,
+    "bytes_bajada": 595230,
+    "paquetes_subida": 21,
+    "paquetes_bajada": 425,
+    "rtt_ms": 166,
+    "estado": "activo",
+    "ruta": [
+      {
+        "nodo_id": "dev-04",
+        "latencia_ms": 0,
+        "observado": true
+      },
+      {
+        "nodo_id": "router-01",
+        "latencia_ms": 1,
+        "observado": true
+      },
+      {
+        "nodo_id": "isp-telefonica",
+        "latencia_ms": 7,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-nqn",
+        "latencia_ms": 13,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-bue",
+        "latencia_ms": 19,
+        "observado": true
+      },
+      {
+        "nodo_id": "bb-lumen-bue",
+        "latencia_ms": 20,
+        "observado": false
+      },
+      {
+        "nodo_id": "cable-atlantis2",
+        "latencia_ms": 22,
+        "observado": false
+      },
+      {
+        "nodo_id": "ixp-mad",
+        "latencia_ms": 74,
+        "observado": true
+      },
+      {
+        "nodo_id": "ixp-ams",
+        "latencia_ms": 82,
+        "observado": true
+      },
+      {
+        "nodo_id": "nube-msft-ams",
+        "latencia_ms": 83,
+        "observado": true
+      }
+    ],
+    "confianza_ruta": 0.76,
+    "etiquetas": [
+      "ejemplo"
+    ]
+  }
+]

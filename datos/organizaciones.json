@@ -101,7 +101,7 @@
     "pais": "AR",
     "tipo_servicio": "IXP",
     "jurisdiccion": "Argentina",
-    "contexto": "CABASE opera los puntos de intercambio locales: si el tráfico pasa por acá, no sale del país."
+    "contexto": "CABASE promueve la interconexión local. Pasar por un IXP argentino no garantiza que el resto del recorrido quede dentro del país."
   },
   {
     "asn": 26162,
@@ -160,28 +160,12 @@
     "contexto": "INEX conecta a los operadores irlandeses, donde varias nubes tienen región."
   },
   {
-    "asn": 24482,
-    "nombre": "SGIX",
-    "pais": "SG",
-    "tipo_servicio": "IXP",
-    "jurisdiccion": "Singapur",
-    "contexto": "SGIX es el intercambio de Singapur, nodo de todo el sudeste asiático."
-  },
-  {
     "asn": 7527,
     "nombre": "JPIX",
     "pais": "JP",
     "tipo_servicio": "IXP",
     "jurisdiccion": "Japón",
     "contexto": "JPIX es uno de los intercambios de Tokio."
-  },
-  {
-    "asn": 19626,
-    "nombre": "CoreSite",
-    "pais": "US",
-    "tipo_servicio": "Data center",
-    "jurisdiccion": "Estados Unidos",
-    "contexto": "CoreSite opera data centers neutrales en Estados Unidos."
   },
   {
     "asn": 27678,
@@ -232,11 +216,67 @@
     "contexto": "NTT opera una de las redes troncales más grandes de Asia."
   },
   {
-    "asn": 47583,
+    "asn": 65536,
     "nombre": "AS desconocido",
     "pais": "NL",
     "tipo_servicio": "Hosting",
     "jurisdiccion": "Países Bajos",
-    "contexto": "Hosting sin identificar: no está en la lista de organizaciones conocidas."
+    "contexto": "Destino ficticio del ejercicio IoT. AS65536 está reservado para documentación; no identifica a un proveedor real ni atribuye un incidente."
+  },
+  {
+    "asn": 52361,
+    "nombre": "ARSAT",
+    "tipo_servicio": "Backbone estatal",
+    "pais": "AR",
+    "contexto": "ARSAT opera infraestructura estatal argentina, incluida la Red Federal de Fibra Óptica.",
+    "jurisdiccion": "Argentina"
+  },
+  {
+    "asn": 6057,
+    "nombre": "ANTEL",
+    "tipo_servicio": "ISP e IXP",
+    "pais": "UY",
+    "contexto": "Operador estatal uruguayo con infraestructura terrestre y participación en cables submarinos.",
+    "jurisdiccion": "Uruguay"
+  },
+  {
+    "asn": 1299,
+    "nombre": "Arelion",
+    "tipo_servicio": "Backbone",
+    "pais": "SE",
+    "contexto": "Arelion, antes Telia Carrier, opera una red troncal internacional. El ASN no indica por sí solo el país atravesado.",
+    "jurisdiccion": "Suecia"
+  },
+  {
+    "asn": 174,
+    "nombre": "Cogent",
+    "tipo_servicio": "Backbone",
+    "pais": "US",
+    "contexto": "Cogent ofrece tránsito IP por una red internacional.",
+    "jurisdiccion": "Estados Unidos"
+  },
+  {
+    "asn": 7473,
+    "nombre": "Singtel",
+    "tipo_servicio": "Backbone",
+    "pais": "SG",
+    "contexto": "Singtel es un operador de Singapur con conectividad internacional.",
+    "jurisdiccion": "Singapur"
+  },
+  {
+    "asn": 43760,
+    "nombre": "INEX",
+    "tipo_servicio": "IXP",
+    "pais": "IE",
+    "contexto": "El IXP de Dublín, pegado a los data centers donde varias nubes guardan datos europeos.",
+    "jurisdiccion": "Irlanda"
+  },
+  {
+    "asn": 37195,
+    "nombre": "NAPAfrica",
+    "tipo_servicio": "IXP",
+    "pais": "ZA",
+    "contexto": "El IXP más grande de África, en Johannesburgo.",
+    "jurisdiccion": "Sudáfrica"
   }
 ]

@@ -1,46 +1,108 @@
 [
   {
     "id": "cable-sam1",
-    "nombre": "Cable SAM-1 (Las Toninas ↔ Miami)",
+    "nombre": "South America-1 (SAm-1)",
     "organizacion": "Telxius",
     "amarre": {
       "ciudad": "Las Toninas",
       "pais": "AR",
-      "lat": -36.32,
+      "lat": -36.47,
       "lon": -56.7
-    }
+    },
+    "amarres": [
+      {
+        "nodo_id": "amarre-toninas-sam1",
+        "ciudad": "Las Toninas",
+        "pais": "AR",
+        "lat": -36.47,
+        "lon": -56.7
+      },
+      {
+        "nodo_id": "amarre-santos-sam1",
+        "ciudad": "Santos",
+        "pais": "BR",
+        "lat": -23.96,
+        "lon": -46.33
+      },
+      {
+        "nodo_id": "amarre-boca-sam1",
+        "ciudad": "Boca Ratón",
+        "pais": "US",
+        "lat": 26.37,
+        "lon": -80.1
+      }
+    ]
   },
   {
     "id": "cable-atlantis2",
-    "nombre": "Cable Atlantis-2 (Las Toninas ↔ Lisboa)",
+    "nombre": "Atlantis-2",
     "organizacion": "Consorcio Atlantis-2",
     "amarre": {
       "ciudad": "Las Toninas",
       "pais": "AR",
-      "lat": -36.33,
-      "lon": -56.71
-    }
+      "lat": -36.47,
+      "lon": -56.7
+    },
+    "amarres": [
+      {
+        "nodo_id": "amarre-toninas-atl2",
+        "ciudad": "Las Toninas",
+        "pais": "AR",
+        "lat": -36.47,
+        "lon": -56.7
+      },
+      {
+        "nodo_id": "amarre-fortaleza-atl2",
+        "ciudad": "Fortaleza",
+        "pais": "BR",
+        "lat": -3.73,
+        "lon": -38.52
+      },
+      {
+        "nodo_id": "amarre-carcavelos-atl2",
+        "ciudad": "Carcavelos",
+        "pais": "PT",
+        "lat": 38.68,
+        "lon": -9.33
+      }
+    ]
   },
   {
     "id": "cable-unisur",
-    "nombre": "Cable Unisur (Las Toninas ↔ Valparaíso)",
-    "organizacion": "Telxius",
+    "nombre": "UNISUR (Las Toninas ↔ Maldonado)",
+    "organizacion": "Antel / Telxius",
     "amarre": {
       "ciudad": "Las Toninas",
       "pais": "AR",
-      "lat": -36.34,
-      "lon": -56.69
-    }
+      "lat": -36.47,
+      "lon": -56.7
+    },
+    "amarres": [
+      {
+        "nodo_id": "amarre-toninas-unisur",
+        "ciudad": "Las Toninas",
+        "pais": "AR",
+        "lat": -36.47,
+        "lon": -56.7
+      },
+      {
+        "nodo_id": "amarre-maldonado-unisur",
+        "ciudad": "Maldonado",
+        "pais": "UY",
+        "lat": -34.9,
+        "lon": -54.95
+      }
+    ]
   },
   {
     "id": "cable-bicentenario",
-    "nombre": "Cable Bicentenario (Las Toninas ↔ Río)",
+    "nombre": "Bicentenario (Las Toninas ↔ Maldonado)",
     "organizacion": "Telecom Argentina",
     "amarre": {
       "ciudad": "Las Toninas",
       "pais": "AR",
-      "lat": -36.31,
-      "lon": -56.72
+      "lat": -36.47,
+      "lon": -56.7
     }
   },
   {
@@ -85,6 +147,108 @@
       "pais": "CL",
       "lat": -33.05,
       "lon": -71.62
+    }
+  },
+  {
+    "id": "cable-sac",
+    "nombre": "South American Crossing (SAC)",
+    "organizacion": "Lumen",
+    "amarres": [
+      {
+        "nodo_id": "amarre-toninas-sac",
+        "ciudad": "Las Toninas",
+        "pais": "AR",
+        "lat": -36.47,
+        "lon": -56.7
+      },
+      {
+        "nodo_id": "amarre-valparaiso-sac",
+        "ciudad": "Valparaíso",
+        "pais": "CL",
+        "lat": -33.05,
+        "lon": -71.62
+      },
+      {
+        "nodo_id": "amarre-stcroix-sac",
+        "ciudad": "St. Croix",
+        "pais": "VI",
+        "lat": 17.73,
+        "lon": -64.78
+      }
+    ],
+    "amarre": {
+      "ciudad": "Las Toninas",
+      "pais": "AR",
+      "lat": -36.47,
+      "lon": -56.7
+    }
+  },
+  {
+    "id": "cable-malbec",
+    "nombre": "Malbec",
+    "organizacion": "GlobeNet / Meta",
+    "amarres": [
+      {
+        "nodo_id": "amarre-toninas-malbec",
+        "ciudad": "Las Toninas",
+        "pais": "AR",
+        "lat": -36.47,
+        "lon": -56.7
+      },
+      {
+        "nodo_id": "amarre-praiagrande-malbec",
+        "ciudad": "Praia Grande",
+        "pais": "BR",
+        "lat": -24.01,
+        "lon": -46.41
+      },
+      {
+        "nodo_id": "amarre-riodejaneiro-malbec",
+        "ciudad": "Río de Janeiro",
+        "pais": "BR",
+        "lat": -22.97,
+        "lon": -43.18
+      }
+    ],
+    "amarre": {
+      "ciudad": "Las Toninas",
+      "pais": "AR",
+      "lat": -36.47,
+      "lon": -56.7
+    }
+  },
+  {
+    "id": "cable-firmina",
+    "nombre": "Firmina",
+    "organizacion": "Google",
+    "amarres": [
+      {
+        "nodo_id": "amarre-toninas-firmina",
+        "ciudad": "Las Toninas",
+        "pais": "AR",
+        "lat": -36.47,
+        "lon": -56.7
+      },
+      {
+        "nodo_id": "amarre-praiagrande-firmina",
+        "ciudad": "Praia Grande",
+        "pais": "BR",
+        "lat": -24.01,
+        "lon": -46.41
+      },
+      {
+        "nodo_id": "amarre-myrtlebeach-firmina",
+        "ciudad": "Myrtle Beach",
+        "pais": "US",
+        "lat": 33.69,
+        "lon": -78.89
+      }
+    ],
+    "amarre": {
+      "ciudad": "Las Toninas",
+      "pais": "AR",
+      "lat": -36.47,
+      "lon": -56.7
     }
   }
 ]
