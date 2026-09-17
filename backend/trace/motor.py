@@ -51,6 +51,7 @@ class Motor:
         self._alertas_generadas = 0
         self._ts_ultima_critica: str | None = None
         self._proxima_metrica = 0.0
+        self._corrida = 0
 
     # ------------------------------------------------------------------ publicación
 
@@ -96,6 +97,8 @@ class Motor:
         self.simulador = None
 
     def reiniciar_estado(self) -> None:
+        # Descarta las explicaciones que el modelo todavía deba de la corrida anterior.
+        self._corrida += 1
         self.flujos.clear()
         self.paquetes.clear()
         self.dispositivos_extra.clear()
@@ -213,11 +216,11 @@ class Motor:
         self.publicar("alerta", alerta)
         if alerta.severidad in SEVERIDAD_MINIMA_IA and self.asistente.conectado:
             with contextlib.suppress(RuntimeError):  # sin loop corriendo: sólo plantilla
-                asyncio.create_task(self._explicar(alerta))
+                asyncio.create_task(self._explicar(alerta, self._corrida))
 
-    async def _explicar(self, alerta: Alerta) -> None:
+    async def _explicar(self, alerta: Alerta, corrida: int) -> None:
         explicada = await self.asistente.explicar(alerta.model_copy(deep=True))
-        if explicada.fuente_explicacion != "ollama":
+        if explicada.fuente_explicacion != "ollama" or corrida != self._corrida:
             return
         actual = self.almacen.obtener(alerta.id)
         if actual and actual.estado != "abierta":
