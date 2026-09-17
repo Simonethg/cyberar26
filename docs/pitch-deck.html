@@ -37,7 +37,7 @@
   .card{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:22px 24px}
   .card h3{margin:0 0 8px;font-size:20px;font-weight:700}
   .card p{font-size:18px;margin:0;color:#B4C0D8;line-height:1.4}
-  .card .ico{font-size:28px;margin-bottom:10px;display:block}
+  .card .ico{display:inline-block;font:700 12px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.12em;color:var(--azul);border:1px solid var(--azul);border-radius:6px;padding:5px 8px;margin-bottom:12px}
   .kpi{display:flex;flex-direction:column;gap:4px}
   .kpi b{font-size:52px;font-weight:900;line-height:1;color:var(--texto)}
   .kpi span{font-size:15px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
@@ -149,9 +149,9 @@
   <div class="tiempo">Apoyo · preguntas</div>
   <h2><small>Lo que hay hoy</small>Herramientas para expertos, o cajas negras.</h2>
   <div class="cols c3">
-    <div class="card"><span class="ico">🧪</span><h3>Wireshark · Zeek</h3><p>Muestran <b>paquetes</b>, no geografía ni entidades. Sirven al que ya sabe leerlos.</p></div>
-    <div class="card"><span class="ico">🗂️</span><h3>SIEM</h3><p>Logs correlacionados para el <b>analista</b>. Un jefe de turno no abre un SIEM.</p></div>
-    <div class="card"><span class="ico">🛡️</span><h3>Antivirus / EDR</h3><p>«Bloqueamos 3 amenazas». <b>Opaco</b>: no explica qué, ni por dónde, ni bajo qué ley.</p></div>
+    <div class="card"><span class="ico">PCAP</span><h3>Wireshark · Zeek</h3><p>Muestran <b>paquetes</b>, no geografía ni entidades. Sirven al que ya sabe leerlos.</p></div>
+    <div class="card"><span class="ico">SIEM</span><h3>SIEM</h3><p>Logs correlacionados para el <b>analista</b>. Un jefe de turno no abre un SIEM.</p></div>
+    <div class="card"><span class="ico">EDR</span><h3>Antivirus / EDR</h3><p>«Bloqueamos 3 amenazas». <b>Opaco</b>: no explica qué, ni por dónde, ni bajo qué ley.</p></div>
   </div>
   <p class="cita" style="margin-top:28px">Ninguna muestra <span class="acento">el viaje</span> de forma que un oficial no técnico lo entienda de un vistazo.</p>
   <div class="marca"><b>TRACE</b></div><div class="num">3</div>
@@ -162,10 +162,10 @@
   <div class="tiempo">0:25 – 1:05 · demo en vivo</div>
   <h2><small>La solución</small>TRACE muestra el viaje del dato, no el paquete.</h2>
   <div class="cols c4">
-    <div class="card"><span class="ico">🌐</span><h3>Globo en vivo</h3><p>Cada flujo es un arco: dispositivo → ISP → IXP → cable submarino → data center. Observado continuo, inferido punteado.</p></div>
-    <div class="card"><span class="ico">⚖️</span><h3>Jurisdicción</h3><p>Por cada salto: qué organización, qué ASN, qué país y bajo qué ley queda el dato.</p></div>
-    <div class="card"><span class="ico">🚨</span><h3>Alertas explicables</h3><p>5 reglas con valores y línea de base por dispositivo. Ninguna alerta dice sólo «anomalía».</p></div>
-    <div class="card"><span class="ico">🗣️</span><h3>Asistente local</h3><p>Un modelo abierto en la notebook explica cada alerta en castellano y propone una acción.</p></div>
+    <div class="card"><span class="ico">MAPA</span><h3>Globo en vivo</h3><p>Cada flujo es un arco: dispositivo → ISP → IXP → cable submarino → data center. Observado continuo, inferido punteado.</p></div>
+    <div class="card"><span class="ico">LEY</span><h3>Jurisdicción</h3><p>Por cada salto: qué organización, qué ASN, qué país y bajo qué ley queda el dato.</p></div>
+    <div class="card"><span class="ico">ALERTA</span><h3>Alertas explicables</h3><p>5 reglas con valores y línea de base por dispositivo. Ninguna alerta dice sólo «anomalía».</p></div>
+    <div class="card"><span class="ico">IA</span><h3>Asistente local</h3><p>Un modelo abierto en la notebook explica cada alerta en castellano y propone una acción.</p></div>
   </div>
   <div style="display:flex;gap:40px;margin-top:26px">
     <div class="kpi"><b>12</b><span>dispositivos de la base</span></div>
@@ -231,9 +231,9 @@
   <div class="tiempo">1:55 – 2:20 · demo en vivo</div>
   <h2><small>Para el que decide</small>El jefe de turno no es analista de seguridad.</h2>
   <div class="cols c3">
-    <div class="card"><span class="ico">📝</span><h3>Resumime el turno</h3><p>Un párrafo en rioplatense: qué pasó, qué es urgente, qué hacer. Dice si lo escribió el modelo o la plantilla.</p></div>
-    <div class="card"><span class="ico">✅</span><h3>Reconocer / cerrar</h3><p>Cada acción queda registrada. Lo que el operador descarta alimenta la línea de base.</p></div>
-    <div class="card"><span class="ico">📄</span><h3>Informe del turno</h3><p>PDF con tráfico, destinos por país, alertas y el resumen del asistente. CSV que abre bien en Excel.</p></div>
+    <div class="card"><span class="ico">TURNO</span><h3>Resumime el turno</h3><p>Un párrafo en rioplatense: qué pasó, qué es urgente, qué hacer. Dice si lo escribió el modelo o la plantilla.</p></div>
+    <div class="card"><span class="ico">OK</span><h3>Reconocer / cerrar</h3><p>Cada acción queda registrada. Lo que el operador descarta alimenta la línea de base.</p></div>
+    <div class="card"><span class="ico">PDF</span><h3>Informe del turno</h3><p>PDF con tráfico, destinos por país, alertas y el resumen del asistente. CSV que abre bien en Excel.</p></div>
   </div>
   <div class="card" style="margin-top:26px;border-color:rgba(59,130,246,.5)">
     <p style="font-size:21px;color:var(--texto)"><span class="acento" style="font-weight:700">Ejemplo de alerta explicada ·</span> «El sensor de acceso 3 nunca había hablado con un servidor en Países Bajos. Mandó 17 MB en 2 minutos; su promedio es 120 KB por hora.» <span class="muted" style="color:var(--muted)">→ Acción sugerida: aislar el dispositivo de la red y revisar su firmware.</span></p>
@@ -289,9 +289,9 @@
   <div class="tiempo">2:40 – 3:00</div>
   <h2><small>Continuidad</small>Esto no termina el viernes.</h2>
   <div class="cols c3">
-    <div class="card"><span class="ico">🎓</span><h3>Entrenador de personal</h3><p>Los escenarios son JSON: un instructor arma un ejercicio nuevo <b>sin programar</b>. Evaluación con tiempo de detección y alertas reconocidas.</p></div>
-    <div class="card"><span class="ico">🔌</span><h3>Captura real</h3><p>El simulador está detrás de una interfaz: enchufar un sensor en el switch de la unidad es <b>reemplazar un módulo</b>, no reescribir.</p></div>
-    <div class="card"><span class="ico">🏢</span><h3>Despliegue on-premise</h3><p>Un servidor en la red de la unidad. <b>Ningún componente</b> necesita salir a internet. Complementa al SIEM, no lo reemplaza.</p></div>
+    <div class="card"><span class="ico">AULA</span><h3>Entrenador de personal</h3><p>Los escenarios son JSON: un instructor arma un ejercicio nuevo <b>sin programar</b>. Evaluación con tiempo de detección y alertas reconocidas.</p></div>
+    <div class="card"><span class="ico">PCAP</span><h3>Captura real</h3><p>El simulador está detrás de una interfaz: enchufar un sensor en el switch de la unidad es <b>reemplazar un módulo</b>, no reescribir.</p></div>
+    <div class="card"><span class="ico">ON-PREM</span><h3>Despliegue on-premise</h3><p>Un servidor en la red de la unidad. <b>Ningún componente</b> necesita salir a internet. Complementa al SIEM, no lo reemplaza.</p></div>
   </div>
   <p class="cita" style="margin-top:28px">Monitor de la red de una unidad <span class="acento">y</span> entrenador del personal que la opera.</p>
   <div class="marca"><b>TRACE</b></div><div class="num">10</div>
@@ -330,7 +330,8 @@
     notas.innerHTML=slides[i].dataset.notas||'';
     location.hash=i+1;
   }
-  addEventListener('keydown',e=>{
+  addEventListener('hashchange',()=>{const n=(parseInt(location.hash.slice(1))||1)-1;if(n!==i)mostrar(n);});
+addEventListener('keydown',e=>{
     if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();mostrar(i+1);}
     else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();mostrar(i-1);}
     else if(e.key==='Home')mostrar(0); else if(e.key==='End')mostrar(slides.length-1);
