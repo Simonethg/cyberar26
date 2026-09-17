@@ -19,7 +19,7 @@ MODELO = os.environ.get("TRACE_OLLAMA_MODELO", "qwen2.5:7b")
 MODELO_ALTERNATIVO = os.environ.get("TRACE_OLLAMA_MODELO_ALT", "llama3.1:8b")
 TIMEOUT_S = float(os.environ.get("TRACE_OLLAMA_TIMEOUT", "12"))
 # Las alertas graves y el resumen de turno merecen esperar la cola del modelo.
-TIMEOUT_PRIORITARIO_S = float(os.environ.get("TRACE_OLLAMA_TIMEOUT_PRIORITARIO", "45"))
+TIMEOUT_PRIORITARIO_S = float(os.environ.get("TRACE_OLLAMA_TIMEOUT_PRIORITARIO", "90"))
 
 SISTEMA = (
     "Sos un analista de SOC argentino. Explicá la alerta en dos oraciones en español "

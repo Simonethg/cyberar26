@@ -3,7 +3,9 @@
 Visualizador y analizador de rutas de tráfico de red **simulado** de una base ficticia
 (Base Aérea El Chañar). Demo CYBER.AR 2026, 100% local y determinística.
 
-Este repositorio contiene, por ahora, el **backend** (Persona B).
+Contiene el **backend** (FastAPI) y un **frontend** mínimo de HTML/JS servido por el mismo
+servidor: mapamundi en canvas con las rutas en vivo, panel de alertas con detalle y
+acciones, métricas, top destinos y resumen de turno.
 
 ## Requisitos
 
@@ -22,6 +24,7 @@ python3 -m venv .venv
 cd backend && ../.venv/bin/python -m uvicorn trace.app:app --reload --port 8000
 ```
 
+- Interfaz: http://localhost:8000
 - API y docs: http://localhost:8000/docs
 - WebSocket de eventos: `ws://localhost:8000/ws/flujos`
 
@@ -34,7 +37,7 @@ Variables de entorno útiles:
 | `TRACE_OLLAMA_URL` | `http://localhost:11434` | Endpoint de Ollama |
 | `TRACE_OLLAMA_MODELO` | `qwen2.5:7b` | Modelo preferido |
 | `TRACE_OLLAMA_TIMEOUT` | `12` | Timeout en segundos antes del fallback |
-| `TRACE_OLLAMA_TIMEOUT_PRIORITARIO` | `45` | Timeout para alertas graves y resumen de turno |
+| `TRACE_OLLAMA_TIMEOUT_PRIORITARIO` | `90` | Timeout para alertas graves y resumen de turno |
 
 ## Guiones
 
